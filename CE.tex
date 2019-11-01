@@ -1,0 +1,416 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath} 
+\usepackage{graphicx}
+\usepackage{esint} 
+
+\let\oldoiint\oiint
+\renewcommand{\oiint}{\oldoiint\limits}
+
+\begin{document}
+
+\author{Cristiano Cuffaro}
+\title{Campi Elettromagnetici}
+\maketitle
+
+\section{Definizioni e relazioni fondamentali\\}
+
+Spostamento dielettrico $\rightarrow \textbf{D} = \epsilon\,\textbf{E} = \epsilon_0\,\epsilon_r\,\textbf{E}$\\\\Campo magnetico $\rightarrow \textbf{H} = \frac{\textbf{B}}{\mu} = \frac{\textbf{B}}{\mu_0\,\mu_r}$\\
+
+\emph{Equazioni di Maxwell}:
+
+\begin{itemize}
+\item $\oint_{s} \textbf{E·ds} = -\frac{d}{dt} \iint_{S} \textbf{B·n}_0 \,dS \Rightarrow \nabla\times\textbf{E} = -\frac{\partial\textbf{B}}{\partial t}$ (vortici di \textbf{E})
+
+\item $\oint_{s} \textbf{H·ds} = \frac{d}{dt} \iint_{S} \textbf{D·n}_0 \,dS + \iint_{S}\textbf{J·n}_0 \,dS \Rightarrow \nabla\times\textbf{H} = \frac{\partial\textbf{D}}{\partial t} + \textbf{J}$ (vortici di \textbf{H})
+
+\item$\oiint_{S}\textbf{n}_0\textbf{·D}\,dS = q \Rightarrow \nabla\textbf{·D} = \rho$ (sorgenti di \textbf{D})
+
+\item$\oiint_{S}\textbf{n}_0\textbf{·B}\,dS = 0 \Rightarrow \nabla\textbf{·B} = 0$ (sorgenti di \textbf{B} nulle)
+\end{itemize}
+
+\subsection*{Corrente di conduzione}
+Densità di corrente $\textbf{J}$ e corrispondente quantità integrale $\textbf{I}_S$ associata a densità di carica $\rho$ in moto con velocità media $\textbf{u}$.\\
+
+$\textbf{J} = \rho\,\textbf{u}$;\hspace{10mm}$I_S = \iint_{S}\textbf{J·}\textbf{n}_0\,dS$\\\\
+\emph{Equazione di continuità}: $\oiint_{S}\textbf{J·}\textbf{n}_0\,dS = \iiint_{V}\nabla\cdot\textbf{J}\,dV = -\frac{\partial}{\partial t}\iiint_{V}\rho\,dV$\\
+
+in forma differenziale $\rightarrow \nabla\cdot\textbf{J} = -\frac{\partial\rho}{\partial t}$\\\\
+Cariche mosse dal campo elettrico, secondo la conducibilità $g\,\,(S\cdot m^{-1})$ del materiale:\\\\
+
+$\textbf{J} = g\,\textbf{E}\hspace{10mm} $(per un conduttore ideale $g\rightarrow\infty$)\\\\
+\subsection*{Parametri del mezzo}
+Il mezzo è caratterizzato magneticamente da:
+\begin{itemize}
+\item[-]costante dielettrica $\epsilon$;
+\item[-]permittività magnetica $\mu$;
+\item[-]conducibilità elettrica $g$;
+\end{itemize}
+Il mezzo si dice:
+\begin{itemize}
+\item\textbf{omogeneo} se i parametri non variano al variare della posizione (NON omogeneo $\Rightarrow$ il contrario);
+\item\textbf{lineare} se ciascun parametro è indipendente dall'intensità dei campi;
+\item\textbf{isotropo} se si comporta allo stesso modo in tutte le direzioni;\\\\
+\underline{\textbf{Oss:}} Un mezzo \textbf{anisotropo} è invece caratterizzato da un'espressione tensoriale del parametro. Ad esempio:\\\\
+per il parametro $\epsilon \rightarrow$\hspace{4mm}[\textbf{$\epsilon$}] $ = \begin{bmatrix}
+\epsilon_{11} & \epsilon_{12} & \epsilon_{13}\\
+\epsilon_{21} & \epsilon_{22} & \epsilon_{23}\\
+\epsilon_{31} & \epsilon_{32} & \epsilon_{33}\\
+\end{bmatrix}$\\
+In un mezzo \emph{anisotropo} i vettori della coppia corrispondente (\textbf{E}, \textbf{D}; \textbf{H}, \textbf{B}; \textbf{E}, \textbf{J}) possono non essere paralleli tra loro. Trasformazioni lineari:\\
+\begin{center}
+\textbf{D} = \textbf{[$\epsilon$]$\,$E} ;\hspace{5mm}\textbf{B} = \textbf{[$\mu$]$\,$H} ;\hspace{5mm}\textbf{D} = \textbf{[$g$]$\,$E} ;
+\end{center}
+\item\textbf{chirale} quando i vettori elettrici e magnetici dipendono dai corrispondenti vettori di entrambi i tipi.
+\end{itemize}
+\subsection*{Grandezze impresse}
+Se $\textbf{J} = g\,\textbf{E}$ :\\
+\hspace*{30mm}$\nabla\times\textbf{E} = -\frac{\partial\textbf{B}}{\partial t}$
+\begin{flushright}
+sono equazioni omogenee\\
+\end{flushright}
+\hspace*{30mm}$\nabla\times\textbf{H} = -\frac{\partial\textbf{D}}{\partial t} + g\textbf{E}$\\\\
+\emph{Chi ha generato il campo magnetico?}\\
+$\Rightarrow$ \'E generato dai processi che trasformano energia di "altro tipo" in energia elettromagnetica.\\
+Si parla quindi di \emph{corrente impressa}:\hspace{5mm}$\textbf{J}_i \neq g\textbf{E}$\\
+le sorgenti impresse non derivano dalla presenza dei campi MA li generano.\\
+\begin{center}
+$\nabla\times\textbf{H} = \frac{\partial\textbf{D}}{\partial t} + g\textbf{E} + \textbf{J}_i$\\
+\end{center}
+Nella pratica la corrente impressa non descrive l'effettiva sorgente del campo ma una sorgente \emph{equivalente} fissata a priori per poter determinare il campo.\\
+Invece, la \emph{corrente magnetica impressa}:\hspace{5mm}$\textbf{J}_{im}$ non è "fisica" ma "matematica".\\\\
+Con le correnti di sorgente\\\\
+\hspace*{30mm}$\nabla\times\textbf{E} = -\frac{\partial\textbf{B}}{\partial t} - \textbf{J}_m - \textbf{J}_{im}$\\\\
+\hspace*{30mm}$\nabla\times\textbf{H} = \frac{\partial\textbf{H}}{\partial t} + \textbf{J} + \textbf{J}_i$\\\\
+\underline{\textbf{N.B.}} $\textbf{J}_m$ è nulla e si scrive solo per motivi di simmetria.\\\\
+Possiamo osservare che esistono queste \emph{dualità}:
+\begin{center}
+$\textbf{E}\rightarrow\textbf{H}\hspace{15mm}\textbf{H}\rightarrow -\textbf{E}$\\
+$\textbf{J}\rightarrow\textbf{J}_m\hspace{15mm}\textbf{J}_m\rightarrow -\textbf{J}$\\
+$\epsilon\longleftrightarrow\mu$\\
+\end{center}
+(Le trasformazioni NON alterano le soluzioni!!)\\
+\subsection*{Condizioni al contorno}
+Relazioni differenziali che costituiscono un vincolo lasco per le soluzioni, che sono classi di funizoni. La soluzione si trova imponendo le condizioni al contorno. Vincoli compatibili con le proprietà fisiche e vincoli in corrispondenza di superfici di separazione tra mezzi differenti.\\\\
+%\underline{Esempio cilindro con asse normale alle superfici}\\\\
+%\begin{figure}[ht] 
+%\centering
+%\includegraphics[width=0.7\linewidth]{im1}
+%\end{figure}\\
+%Per Gauss:\\
+%\hspace*{15mm}$\oiint_{S}\textbf{D·}\textbf{n}_0\,dS = \iiint_{V}\rho\,dV = \iint_{S1}\textbf{D}_1\textbf{·n}_1\,dS + \dots + \iint_{S3}\textbf{D}_3\textbf{·n}_3\,dS$\\\\
+%quando $\Delta h\rightarrow 0,\,\,S_3\rightarrow 0,\,\,S_1\rightarrow S_2\rightarrow S$ e $\textbf{n}_1\rightarrow -\textbf{n}_\rightarrow-\textbf{n}_0$\\
+%\begin{equation*}
+%\Rightarrow\,\,\iint_{S}(\textbf{D}_2-\textbf{D}_1)\textbf{·n}_0\,dS = \lim_{\Delta h\to 0}\iiint_{V}\rho\,dV\\
+%\end{equation*}
+%Due casi:
+%\begin{enumerate}
+%\item $\rho$ finita $\Rightarrow\iiint_{V}\rho\,dV$ svanisce
+%\begin{center}$(\textbf{D}_2-\textbf{D}_1)\textbf{·n}_0 = 0$\end{center}
+%\item $\rho = \sigma\delta(z-z_0)$ per la proprietà di campionamento della funzione impulsiva
+%\begin{center}$(\textbf{D}_2-\textbf{D}_1)\textbf{·n}_0 = \sigma$\end{center}
+%\end{enumerate}
+%Dalle precedenti si ricava per dualità\begin{equation*}(\textbf{B}_2-\textbf{B}_1)\textbf{·n}_0 = \sigma_m = 0\end{equation*}
+\begin{tabular}{||c||c||}
+\hline
+\hline
+\textbf{Componenti normali}&\textbf{Componenti tangenziali}\\
+\hline
+\hline
+$\textbf{n}_0\cdot(\textbf{E}_2-\frac{\epsilon_1}{\epsilon_2}\textbf{E}_1) = \frac{\sigma}{\epsilon_2}$&$\textbf{n}_0\times(\textbf{E}_2-\textbf{E}_1)=0$\\
+\hline
+$\textbf{n}_0\cdot(\textbf{D}_2-\textbf{D}_1)=\sigma$&$\textbf{n}_0\times(\textbf{D}_2-\frac{\epsilon_2}{\epsilon_1}\textbf{D}_1)=0$\\
+\hline
+$\textbf{n}_0\cdot(\textbf{H}_2-\frac{\mu_1}{\mu_2}\textbf{H}_1)=0$&$\textbf{n}_0\times(\textbf{H}_2-\textbf{H}_1)=\textbf{K}$\\
+\hline
+$\textbf{n}_0\cdot(\textbf{B}_2-\textbf{B}_1)=0$&$\textbf{n}_0\times(\textbf{B}_2-\frac{\mu_2}{\mu_1}\textbf{B}_1)=\mu_2\textbf{K}$\\
+\hline\hline
+\end{tabular}\\\\\\
+dove \textbf{K} è la corrente superficiale di densità lineare ($Am^-1$) finita.
+\section{Bilancio energetico e unicità}
+\subsection*{Il teorema di Poynting}
+\begin{equation*}
+\oiint_{S}\textbf{E}\times\textbf{H}\cdot\textbf{n}_0\,dS+\iiint_{V}(\textbf{H}\cdot\frac{\partial\textbf{B}}{\partial t}+\textbf{E}\cdot\frac{\partial\textbf{D}}{\partial t})\,dV+\iiint_{V}g\textbf{E}\cdot\textbf{E}\,dV=\iiint_{V}(-\textbf{J}_i\cdot\textbf{E}-\textbf{J}_{im}\cdot\textbf{H})\,dV\\\\
+\end{equation*}
+Il termine $\iiint_{V}(-\textbf{J}_i\cdot\textbf{E}-\textbf{J}_{im}\cdot\textbf{H})\,dV$ rappresenta la potenza che le correnti impresse (\emph{sorgenti}) creano all'interno del volume $V$.\\\\
+\underline{\textbf{Oss:}} l'integrando è $\neq0$ solo nei punti in cui $\textbf{J}_i\neq0$ e $\textbf{J}_{im}\neq0$; tali punti individuano il \emph{volume di sorgente}, che in generale non coincide con il volume, arbitrario, $V$.\\\\
+Il teorema di Poynting mostra che la potenza creata dalle sorgenti si divide in tre parti, corrispondenti ai termini a primo membro:
+\begin{enumerate}
+\item $\iiint_{V}g\textbf{E}\cdot\textbf{E}\,dV=\iiint_{V}\textbf{J}\cdot\textbf{E}\,dV$\\
+è la potenza che il campo cede alle correnti di conduzione e che viene trasformata in calore (dissipata) per effetto Joule;
+\item $\iiint_{V}(\textbf{H}\cdot\frac{\partial\textbf{B}}{\partial t}+\textbf{E}\cdot\frac{\partial\textbf{D}}{\partial t})\,dV=\frac{\partial W_m}{\partial t}+\frac{\partial W_e}{\partial t}$\\
+è la potenza che va a variare l'energia immagazzinata nel campo elettromagnetico;
+\item $\oiint_{S}\textbf{E}\times\textbf{H}\cdot\textbf{n}_0\,dS$\\
+è la potenza che fluisce attraverso la superficie $S$ che racchiude il volume V.
+\end{enumerate}
+$\textbf{E}\times\textbf{H}\rightarrow$ \emph{vettore di Poynting}, rappresenta la densità superficiale di potenza associata al campo elettromagnetico.\\\\
+\subsection*{Applicazione a sorgenti armoniche}
+Osserviamo il caso in cui le sorgenti, e di conseguenza i campi, variano sinusoidalmente nel tempo:\\\\
+\hspace*{40mm}$\textbf{J}_i=J_i\sin(\omega t)\,\textbf{i}_0$\\
+\hspace*{40mm}$\textbf{E}=E\sin(\omega t+\psi_e)\,\textbf{e}_0$\\
+\hspace*{40mm}$\textbf{H}=H\sin(\omega t+\psi_h)\,\textbf{h}_0$\\\\
+Consideriamo il teorema di Poynting e osserviamo che quando le grandezze hanno andamento periodico, più che i valori istantanei sono significativi i valori medi in un periodo T.
+\subsubsection*{Mezzo non dissipativo}
+\begin{equation*}
+-\frac{1}{2}\iiint_{V}J_iE\,\textbf{i}_0\cdot\textbf{e}_0\,\cos\psi_e\,dV=\frac{1}{T}\int_0^T\oiint_{S}\textbf{E}\times\textbf{H}\cdot\textbf{n}_0\,dS\,dt\\
+\end{equation*}
+I termini corrispondenti a variazioni di energia immagazzinata sono a media nulla. Ipotizzando $\textbf{i}_0\cdot\textbf{e}_0>0$ si osserva che il segno del valore medio della potenza creata dipende dallo sfasamento $\psi_e$:
+\begin{itemize}
+\item se $\frac{\pi}{2}<\psi_e<\frac{3\pi}{2}$, la potenza creata è positiva (fuoriesce dalla superficie);
+\item se $\psi_e=\frac{\pi}{2}$ o $\psi_e=\frac{3\pi}{2}$ ("quadratura"), la sorgente non eroga potenza, ma crea potenza periodica a media nulla;
+\item se $0<\psi_e<\frac{\pi}{2}$ o $\frac{3\pi}{2}<\psi_e<2\pi$, la potenza creata risulta negativa $\Rightarrow$ non c'è una sorgente MA un elemento dissipativo.
+\end{itemize}
+\subsubsection*{Involucro metallico}
+Consideriamo ora la sorgente racchiusa in un involucro conduttore ideale, all'interno del quale il mezzo è, in generale, dissipativo ($g\neq0$).\\Il campo elettrico su $S$ è normale alla superficie $\Rightarrow$ il flusso del vettore di Poynting attraverso $S$ è nullo.\\\\
+Considerando le quantità medie su un periodo e assumendo $\textbf{i}_0\cdot\textbf{e}_0\neq0$ si ha:
+\begin{equation*}
+-\frac{1}{2}\iiint_{V}J_iE\,\textbf{i}_0\cdot\textbf{e}_0\,\cos\psi_e\,dV=\iiint_{V}g\frac{E^2}{2}\,dV\\
+\end{equation*}
+tutta la potenza erogata dalla sorgente si dissipa nel materiale.\\\\
+\underline{\textbf{N.B.}} se il materiale fosse privo di dissipazioni ($g\neq0$) la fase verrebbe modificata in modo tale da avere sfasamento $\psi_e = \frac{\pi}{2}$ ("quadratura") e quindi potenza media nulla.
+\section{Campi nel dominio della frequenza}
+\subsection*{Notazioni complesse}
+Campo elettromagnetico sinusoidale con pulsazione $\omega$:\\\\
+$\textbf{E}(t)=E_x(t)\,\textbf{x}_0+E_y(t)\,\textbf{y}_0+E_z(t)\,\textbf{z}_0$\hspace{10mm}con\hspace{5mm}$E_x(t)=E_{0_x}\cos(\omega t+\phi_x)$\\\\
+\underline{\textbf{def}}\hspace{4mm}Vettore campo complesso:\\\\
+\hspace*{10mm}$\hat{\textbf{E}}=E_{0_x}\,e^{j\phi_x}\,\textbf{x}_0+E_{0_y}\,e^{j\phi_y}\,\textbf{y}_0+E_{0_z}\,e^{j\phi_z}\,\textbf{z}_0$\\\\
+\hspace*{10mm}$=E_{0_x}\,(\cos\phi_x+j\sin\phi_x)\,\textbf{x}_0+\cdots+E_{0_z}\,(\cos\phi_z+j\sin\phi_z)\,\textbf{z}_0$\\\\
+\hspace*{10mm}$=(E_{x_r}+jE_{x_j})\,\textbf{x}_0+(E_{y_r}+jE_{y_j})\,\textbf{y}_0+(E_{z_r}+jE_{z_j})\,\textbf{z}_0$\\\\
+\hspace*{10mm}$=\textbf{E}_r+j\,\textbf{E}_j$\\\\
+Di conseguenza
+\begin{equation*}
+\textbf{E}(t)=Re[\,\hat{\textbf{E}}\,e^{j\omega t}\,]=\textbf{E}_r\cos\omega t-\,\textbf{E}_j\sin\omega t
+\end{equation*}
+\subsection*{Polarizzazione}
+L'estremo libero di $\textbf{E}(t)$ descrive in generale un'ellisse nel piano individuato da $\textbf{E}_r$ e $\textbf{E}_j$: il vettore $\textbf{E}(t)$ è polarizzato ellitticamente. In casi particolari l'ellisse degenera in
+\begin{itemize}
+\item circonferenza (quando $\textbf{E}_r\cdot\textbf{E}_j=0$ e $|\textbf{E}_r|=|\textbf{E}_j|$): il vettore è polarizzato circolarmente;
+\item segmento di retta (quando $\textbf{E}_r\times\textbf{E}_j=0$): il vettore ha polarizzazione lineare (o rettilinea);
+\end{itemize}
+\emph{Parametri di polarizzazione}:\\\\
+$\rightarrow\,\,$ angolo di inclinazione $\phi$: angolo tra l'asse maggiore dell'ellisse di polarizzazione e una direzione (in genere ori4zzontale) nel piano dell'ellisse.\\
+$\rightarrow\,\,$ angolo di ellitticità $\chi=\pm\arctan\frac{E_{min}}{E_{max}}$\\\\
+\underline{\textbf{N.B.}} posso sempre esprimere qualunque polarizzazione come somma di polarizzazioni lineari (non $\parallel$).
+\subsection*{Costante dielettrica nel dominio della frequenza}
+In riferimento a mezzi rarefatti non polari (gas), studiamo $\epsilon$ in funzione del momento di dipolo elettrico $P$ indotto per unità di volume:
+\begin{equation*}
+\epsilon=\epsilon_0\,(1+\chi)=\epsilon_0\,\left[1+\frac{P}{\epsilon_0E}\right]
+\end{equation*}
+Allora poiché $\textbf{D}(t)=\epsilon_0\textbf{E}(t)+\textbf{P}(t)$, nel dominio della frequenza:
+\begin{equation*}
+\textbf{D}(\omega)=\epsilon_0\textbf{E}(\omega)+\textbf{P}(\omega)=\epsilon\textbf{E}(\omega)
+\end{equation*}
+\begin{equation*}
+\Rightarrow\,\,\epsilon(\omega)=\epsilon_0\left[1+\frac{P(\omega)}{\epsilon_0E(\omega)}\right]
+\end{equation*}
+\subsection*{Mezzi non polari con cariche vincolate}
+\begin{equation*}
+\textbf{P}=P\,\textbf{p}_0=q\ell\,\textbf{p}_0
+\end{equation*}
+Il moto del sistema di cariche si ottiene dall'equilibrio delle forze, assunte parallele ad $\textbf{E}$:
+\begin{equation*}
+F_i+F_s+F_r=q\,E(t)
+\end{equation*}
+dove
+\begin{itemize}
+\item $F_i = m\frac{d^2\ell}{dt^2}$\hspace{29mm}è la forza di inerzia;
+\item $F_s=s\frac{d\ell}{dt}$\hspace{31mm}è la forza di smorzamento;
+\item $F_r=c\,\ell$\hspace{33mm}è la forza di richiamo;
+\item $q\,E(t)=q\,E_0\cos\omega t$\hspace{15mm}è la forza esercitata dal campo elettrico.
+\end{itemize}
+Dal bilancio delle forze si ricava l'equazione differenziale
+\begin{equation*}
+m\frac{d^2\ell}{dt^2}+s\frac{d\ell}{dt}+c\,\ell=q\,E_0\cos\omega t
+\end{equation*}
+passando alla notazione complessa si ottiene l'equazione algebrica
+\begin{equation*}
+-\omega^2\hat{\ell}+j\omega\frac{s}{m}\hat{\ell}+\frac{c}{m}\hat{\ell}=\frac{q}{m}\hat{E}
+\end{equation*}
+definendo $\alpha=\frac{s}{2m}$ (coefficiente di smorzamento) e $\omega_0=\sqrt{\frac{c}{m}}$ (pulsazione di risonanza), l'equazione diventa
+\begin{equation*}
+(-\omega^2+2j\omega\alpha+\omega_0^2)\,q\hat{\ell}=\frac{q^2}{m}\hat{E}
+\end{equation*}
+e fornisce il fasore $\hat{P}=q\hat{ell}$ del momento di dipolo indotto
+\begin{equation*}
+\hat{P}=\frac{q^2}{m}\frac{\hat{E}}{(\omega_0^2-\omega^2)+2j\alpha\omega}
+\end{equation*}
+per cui
+\begin{equation*}
+\epsilon(\omega)=\epsilon_0(1+\frac{\hat{P}}{\epsilon_0\hat{E}})=\epsilon_0(\epsilon'+j\epsilon'')
+\end{equation*}
+La costante dielettrica relativa è
+\begin{equation*}
+\epsilon'+j\epsilon''=1+\frac{q^2}{\epsilon_0m}\frac{(\omega_0^2-\omega^2)-2j\alpha\omega}{(\omega_0^2-\omega^2)^2+4\alpha^2\omega^2}
+\end{equation*}
+Rispetto alla pulsazione di risonanza $\omega_0$ si individuano tre campi di frequenza caratteristici:
+\begin{enumerate}
+\item "basse" ($\omega\ll\omega_0$) frequenze
+\begin{equation*}
+\epsilon'\simeq1+\frac{q^2}{\epsilon_0m\omega_0^2};\hspace{15mm}-\epsilon''\simeq\frac{q^2}{\epsilon_0m}\frac{2\alpha\omega}{\omega_0^4}\ll\epsilon'
+\end{equation*}
+$\epsilon$ è circa reale e indipendente da $\omega$;
+\item "alte" ($\omega\gg\omega_0$) frequenze
+\begin{equation*}
+\epsilon'\simeq1-\frac{q^2}{\epsilon_0m\omega^2};\hspace{15mm}-\epsilon''\simeq\frac{q^2}{\epsilon_0m}\frac{2\alpha}{\omega^3}\ll\epsilon'
+\end{equation*}
+$\epsilon$ è ancora prevalentemente reale e ha una debole dipendenza dalla frequenza;
+\item frequenze nell'intorno della risonanza $\omega\simeq\omega_0$
+\begin{equation*}
+\epsilon'+j\epsilon''\simeq1+\frac{q^2}{2\epsilon_0m\omega_0}\left[\frac{·\omega}{(·\omega)^2+\alpha^2}-j\frac{\alpha}{(·\omega)^2+\alpha^2}\right]
+\end{equation*}
+con $·\omega=\omega_0-\omega$.\\
+\end{enumerate}
+\underline{\textbf{Oss:}} $\epsilon''<0$ e $\alpha>0$ sempre!
+\subsection*{Mezzi compositi: atmosfera}
+L'atmosfera è composta prevalentemente da azoto (poco polarizzabile) e da ossigeno e vapore acqueo.\\
+$N_{O_2}$ singoli modi di polarizzazione:
+\begin{equation*}
+\epsilon'(\omega)=\sum_{i=1}^{N_{H_2O}}\left[S'F'(\omega)\right]_i+\sum_{i=1}^{N_{O_2}}\left[S'F'(\omega)\right]_i+\overline{\epsilon'}
+\end{equation*}
+\begin{equation*}
+\hspace*{4mm}\epsilon''(\omega)=\sum_{i=1}^{N_{H_2O}}\left[S''F''(\omega)\right]_i+\sum_{i=1}^{N_{O_2}}\left[S''F''(\omega)\right]_i+\overline{\epsilon''}
+\end{equation*}
+Osserviamo che la parte immaginaria della costante dielettrica nasce quando siamo in presenza di dissipazioni, come in questo caso.
+\subsection*{Mezzi conduttori}
+Qui vi sono delle cariche libere di muoversi (corrente di conduzione) e c'è dissipazione.\\
+La costante dielettrica relativa nel dominio della frequenza è data da
+\begin{equation*}
+\epsilon'+j\epsilon''=1-\frac{q^2}{\epsilon_0m}\frac{1}{\omega^2+4\alpha^2}-j\frac{q^2}{\epsilon_0m}\frac{2\alpha}{\omega(\omega^2+4\alpha^2)}
+\end{equation*}
+mentre invece la conducibilità complessa nel dominio della frequenza risulta
+\begin{equation*}
+g(\omega)=\frac{q^2}{m(2\alpha+j\omega)}=\frac{q^2}{m}\frac{2\alpha}{4\alpha^2+\omega^2}-j\frac{q^2}{m}\frac{\omega}{4\alpha^2+\omega^2}
+\end{equation*}
+a "bassa" ($\omega\ll\alpha$) frequenza
+\begin{equation*}
+g(\omega)\simeq\frac{q^2}{m}\frac{1}{2\alpha}-j\frac{q^2}{m}\frac{\omega}{4\alpha^2}
+\end{equation*}
+$|\mathrm{Im}[g]|\ll\mathrm{Re}[g]$.\\
+Per un conduttore la parte immaginaria della costante dielettrica del mezzo dissipativo è pari a
+\begin{equation*}
+\epsilon''=-\frac{\mathrm{Re}[g]}{\omega\epsilon_0}
+\end{equation*}
+descrive lo stesso processo che descrive la parte reale di $g$, per cui
+\begin{equation*}
+\epsilon''\leftrightarrow\mathrm{Re}[g]
+\end{equation*}
+per mezzi di tipo diverso (non conduttori) come i mezzi condensati è comunque utile considerare questo tipo di relazioni:
+\begin{equation*}
+\epsilon''\simeq-\frac{g}{\omega\epsilon_0}\hspace{5mm}\Rightarrow\hspace{5mm}g_e=-\omega\epsilon_0\epsilon''
+\end{equation*}
+dove $g_e$ è la conducibilità equivalente del mezzo.
+\section{Relazioni nel dominio della frequenza}
+\subsection*{Teorema di Poynting}
+\begin{equation*}
+\iiint_V(-\frac{\textbf{J}_i^*\cdot\textbf{E}}{2}-\frac{\textbf{J}_{im}\cdot\textbf{H}^*}{2})\,dV
+\end{equation*}
+\begin{equation*}
+=\iiint_Vg\frac{\textbf{E}\cdot\textbf{E}^*}{2}\,dV+j\omega\iiint_V(\mu\frac{\textbf{H}\cdot\textbf{H}*}{2}-\epsilon^*\frac{\textbf{E}\cdot\textbf{E}^*}{2})\,dV+\frac{1}{2}\oiint_S(\textbf{E}\times\textbf{H}^*)\cdot\textbf{n}\,dS
+\end{equation*}
+Identifichiamo il significato dei vari termini:
+\begin{itemize}
+\item termine di sorgente
+\begin{equation*}
+\iiint_V(-\frac{\textbf{J}_i^*\cdot\textbf{E}}{2}-\frac{\textbf{J}_{im}\cdot\textbf{H}^*}{2})\,dV
+\end{equation*}
+assumendo polarizzazioni lineari nel dominio della frequenza e quindi, assunti $\textbf{J}_i$ ed $\textbf{E}$ concordi, $\textbf{i}_0\cdot\textbf{e}_0=1$
+\begin{equation*}
+\Rightarrow\hspace{5mm}-\frac{\textbf{J}_i^*\cdot\textbf{E}}{2}=-\frac{1}{2}J_0E_0\,\cos\psi_e-j\frac{1}{2}J_0E_0\,\sin\psi_e
+\end{equation*}
+\begin{itemize}
+\item[-] parte reale: potenza media erogata nell'unità di volume dalle sorgenti elettriche;
+\item[-] parte immaginaria: potenza reattiva che rappresenta la misura della potenza a media nulla, fornita e recuperata dalle sorgenti.
+\end{itemize}
+\item Il termine
+\begin{equation*}
+\iiint_Vg\frac{\textbf{E}\cdot\textbf{E}^*}{2}\,dV
+\end{equation*}
+è una quantità reale che coincide con la potenza media dissipata in un periodo per effetto della conducibilità.
+\item L'integrando del termine
+\begin{equation*}
+j\omega\iiint_V(\mu\frac{\textbf{H}\cdot\textbf{H}*}{2}-\epsilon^*\frac{\textbf{E}\cdot\textbf{E}^*}{2})\,dV
+\end{equation*}
+si può riscrivere individuando
+\begin{itemize}
+\item parte reale
+\begin{equation*}
+\frac{1}{2}\omega\iiint_V(\mu_0|\mu''|\textbf{H}\cdot\textbf{H}^*+\epsilon_0|\epsilon''|\textbf{E}\cdot\textbf{E}^*)\,dV
+\end{equation*}
+rappresenta la potenza media in un periodo dissipata per polarizzazione dielettrica e magnetica;
+\item parte immaginaria
+\begin{equation*}
+\frac{1}{2}\omega\iiint_V(\mu_0\mu'\textbf{H}\cdot\textbf{H}^*+\epsilon_0\epsilon'\textbf{E}\cdot\textbf{E}^*)\,dV
+\end{equation*}
+misura l'ampiezza della variazione di energia immagazzinata nel campo elettrico e magnetico.
+\end{itemize}
+\item Il termine
+\begin{equation*}
+\frac{1}{2}\oiint_S(\textbf{E}\times\textbf{H}^*)\cdot\textbf{n}\,dS
+\end{equation*}
+è in generale complesso
+\begin{itemize}
+\item parte reale: potenza media su un periodo che fluisce attraverso la superficie $S$;
+\item parte immaginaria: potenza reattiva sulla superficie $S$.\\\\
+\underline{\textbf{Oss:}} $\emph{\textbf{P}}=\frac{1}{2}\textbf{E}\times\textbf{H}^*$ è il vettore di Poynting complesso, densità superficiale di potenza ($Wm^{-2}$ o $VAm^{-2}$).
+\end{itemize}
+\end{itemize}
+\subsection*{Bilancio energetico}
+Parte della potenza erogata dal generatore si perde per dissipazione e in parte esce (fluisce fuori) $\Rightarrow$ il totale è uguale alla potenza erogata, detta \emph{potenza irradiata}.\\
+Parte della potenza ceduta dalle correnti torna alle sorgenti bilanciando le variazioni periodiche di energia immagazzinata nei campi e l'eventuale rientro periodico di potenza attraverso $S$.\\\\
+\underline{\textbf{Oss:}} se il mezzo è privo di dissipazioni ($g=0$ e $\epsilon$, $\mu$ reali) $\Rightarrow$ la potenza media erogata dalle sorgenti viene tutta irradiata attraverso $S$.
+\section{Propagazione}
+\subsubsection*{Propagazione in mezzi non dissipativi}
+Mezzo privo di dissipazioni, vale:
+\begin{equation*}
+\nabla^2\textbf{E}+k^2\textbf{E}+\nabla\left(\textbf{E}\cdot\frac{\nabla\epsilon}{\epsilon}\right)=0
+\end{equation*}
+\begin{flushright}
+con $k^2=\omega^2\mu_0\epsilon$
+\end{flushright}
+Mezzo debolmente disomogeneo $|\nabla\epsilon|\rightarrow0$ si riduce ad una equazione delle onde omogenea a coefficiente non costante
+\begin{equation*}
+\nabla^2\textbf{E}+k^2(\textbf{r})\textbf{E}=0
+\end{equation*}
+L'equazione vale in modo approssimato per qualsiasi coppia $\nabla\epsilon$ e $\omega$ tali che
+\begin{equation*}
+\left|\frac{\nabla\epsilon}{\epsilon}\right|\ll k^2=\omega^2\mu_0\epsilon
+\end{equation*}
+\emph{Definizioni}
+\begin{itemize}
+\item $k_0=\omega\sqrt{\mu_0\epsilon_0}$ costante relativa al vuoto;
+\item $n(\textbf{r})=\sqrt{\epsilon'(\textbf{r})}$ indice di rifrazione;
+\item $k(\textbf{r})=n(\textbf{r})k_0$
+\end{itemize}
+Riscriviamo l'equazione delle onde in questa forma
+\begin{equation*}
+\nabla^2\textbf{E}+k_0^2n^2(\textbf{r})\textbf{E}=0
+\end{equation*}
+ipotizzando che abbia soluzione
+\begin{equation*}
+\textbf{E}(\textbf{r})=\textbf{E}_0e^{-jk_0\phi(\textbf{r})}
+\end{equation*}
+possiamo ricavare la \emph{equazione eiconale}
+\begin{equation*}
+n^2-|\nabla\phi|^2=0
+\end{equation*}
+\subsection*{L'onda elettromagnetica}
+\begin{itemize}
+\item[-] $\textbf{E}_0$ è il fattore determina ampiezza e polarizzazione;
+\item[-] $e^{-jk_0\phi(\textbf{r})}$ è il fattore di fase. 
+\end{itemize}
+Campo
+\begin{equation*}
+\textbf{E}(\textbf{r},t)=Re\left[\textbf{E}(\textbf{r})e^{j\omega t}\right]=Re\left[\textbf{E}_0e^{-j[k_0\phi(\textbf{r})-\omega t]}\right]
+\end{equation*}
+\begin{equation*}
+\Rightarrow E_{0_i}(r,t)=E_{0_i}\cos(k_0\phi(r)-\omega t)\hspace{15mm}i=x,y,z
+\end{equation*}
+\\Se il tempo varia di $dt$, lo spostamento $dr$ lungo $\textbf{r}_0$ che annulla il differenziale è
+\begin{equation*}
+k_0(\nabla\phi)\cdot\textbf{r}_0dr-\omega dt=0
+\end{equation*}
+velocità di propagazione nella direzione $\textbf{r}_0$:
+\end{document}
