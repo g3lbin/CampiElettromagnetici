@@ -361,8 +361,7 @@ misura l'ampiezza della variazione di energia immagazzinata nel campo elettrico 
 Parte della potenza erogata dal generatore si perde per dissipazione e in parte esce (fluisce fuori) $\Rightarrow$ il totale è uguale alla potenza erogata, detta \emph{potenza irradiata}.\\
 Parte della potenza ceduta dalle correnti torna alle sorgenti bilanciando le variazioni periodiche di energia immagazzinata nei campi e l'eventuale rientro periodico di potenza attraverso $S$.\\\\
 \underline{\textbf{Oss:}} se il mezzo è privo di dissipazioni ($g=0$ e $\epsilon$, $\mu$ reali) $\Rightarrow$ la potenza media erogata dalle sorgenti viene tutta irradiata attraverso $S$.
-\section{Propagazione}
-\subsubsection*{Propagazione in mezzi non dissipativi}
+\section{Propagazione in mezzi non dissipativi}
 Mezzo privo di dissipazioni, vale:
 \begin{equation*}
 \nabla^2\textbf{E}+k^2\textbf{E}+\nabla\left(\textbf{E}\cdot\frac{\nabla\epsilon}{\epsilon}\right)=0
@@ -413,4 +412,64 @@ Campo
 k_0(\nabla\phi)\cdot\textbf{r}_0dr-\omega dt=0
 \end{equation*}
 velocità di propagazione nella direzione $\textbf{r}_0$:
+\begin{equation*}
+\frac{dr}{dt}\biggl|_{\textbf{r}_0}=\frac{\omega}{k_0\nabla\phi\cdot\textbf{r}_0}=u\big|_{\textbf{r}_0}
+\end{equation*}
+La velocità $u$ dipede da $\textbf{r}_0$
+\begin{itemize}
+\item se $\textbf{r}_0\parallel\nabla\phi$
+\begin{equation*}
+u=\frac{\omega}{k_0|\nabla\phi|}=\frac{\omega}{k_0n}=\frac{c_0}{n}
+\end{equation*}
+con $c_0\simeq 3\cdot10^8\,\,m\cdot s^{-1}$\\
+$u_{min}$ è la velocità di propagazione;
+\item se $\textbf{r}_0\perp\nabla\phi$, $u\rightarrow\infty$ (non è velocità di trasporto).
+\end{itemize}
+\subsection*{Relazioni tra campi e direzione di propagazione}
+Se $\textbf{E}=\textbf{E}_0e^{-jk_0\phi(\textbf{r})}$, anche $\textbf{H}=\textbf{H}_0e^{-jk_0\phi(\textbf{r})}$\\\\
+Posto
+\begin{itemize}
+\item $\eta_0=\sqrt{\frac{\mu_0}{\epsilon_0}}$ \emph{impedenza intrinseca del vuoto};
+\item $\eta_0=\sqrt{\frac{\mu_0}{\epsilon}}$ \emph{impedenza intrinseca del mezzo};
+\end{itemize}
+Dalle prime due equazioni di Maxwell
+\begin{equation*}
+\textbf{E}_0=-\eta\textbf{s}_0\times\textbf{H}_0
+\end{equation*}
+\begin{equation*}
+\textbf{H}_0=\frac{1}{\eta}\textbf{s}_0\times\textbf{E}_0
+\end{equation*}
+componenti reali e immaginari di $\textbf{E}_0$ e $\textbf{H}_0$ sono ortogonali rispettivamente e alla direzione di propagazione $\textbf{s}_0$ e formano una terna trirettangola destra
+\begin{equation*}
+\textbf{h}_0=\textbf{s}_0\times\textbf{e}_0\,;\hspace{15mm}\textbf{e}_0=-\textbf{s}_0\times\textbf{h}_0
+\end{equation*}
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=0.32\linewidth]{im2}
+\end{figure}
+\subsection*{Raggi elettromagnetici}
+Vettore di Poynting
+\begin{equation*}
+\emph{\textbf{P}}=\frac{1}{2}\textbf{E}\times\textbf{H}^*=\frac{1}{2}\textbf{E}_0\times\textbf{H}_0^*=\frac{1}{2}\textbf{E}_0\times\frac{\textbf{s}_0\times\textbf{E}_0^*}{\eta}=\frac{1}{2}\frac{\textbf{E}_0\cdot\textbf{E}_0^*}{\eta}\,\textbf{s}_0
+\end{equation*}
+ha direzione e verso di $\textbf{s}_0$, versore ortogonale alle superfici d'onda $\phi(\textbf{r})=cost$, indicando che il trasporto di potenza avviene ortogonalmente alle $\phi(\textbf{r})=cost$. Curve ortogonali in ogni punto alle superfici d'onda sono traiettorie dell'energia elettromagnetica, denominate \emph{raggi elettromagnetici}.\\\\
+L’uso dei raggi elettromagnetici riduce il problema della propagazione da tridimen-
+sionale a monodimensionale.\\
+Va determinato il raggio (linea che congiunge la sorgente con il punto di ricezione)
+e inoltre vanno determinate ampiezza, fase e polarizzazione del campo lungo il raggio.\\\\
+\underline{\textbf{Oss:}} la traiettoria elettromagnetica dipende dalla distribuzione spaziale dell’indice di rifrazione e dalla direzione iniziale di propagazione.\\\\
+Dall'equazione eiconale si ricava:
+\begin{equation*}
+\frac{d}{ds}(n\textbf{s}_0)=\textbf{s}_0\frac{dn}{ds}+n\frac{d\textbf{s}_0}{ds}=\nabla n
+\end{equation*}
+Per definizione, la curvatura di un raggio $\rho$ è data da $\frac{1}{\rho}$. Per quanto riguarda la curvatura del raggio elettromagnetico, è data da
+\begin{equation*}
+\frac{\textbf{n}_0}{\rho}=\frac{d\textbf{s}_0}{ds}
+\end{equation*}
+con $\textbf{n}_0$ normale principale della curva
+\begin{equation*}
+\frac{1}{\rho}=\textbf{n}_0\cdot\frac{\nabla n}{n}
+\end{equation*}
+la curvatura aumenta con $|\nabla n|$;\\
+il raggio elettromagnetico rimane localmente rettilineo se $\textbf{s}_0\parallel\nabla n$.
 \end{document}
