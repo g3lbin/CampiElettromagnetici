@@ -573,4 +573,78 @@ u\big|_{\bm{\beta}_0}=\frac{\omega}{\beta}=\frac{\omega}{\sqrt{\omega^2\mu\epsil
 \end{equation*}
 \end{itemize}
 \end{itemize}
+\subsection*{Relazioni tra campi e vettore di propagazione}
+Sostituendo l'espressione dell'onda piana nelle prime due equazioni di Maxwell si ottiene
+\begin{equation*}
+\textbf{H}_0=\frac{\textbf{k}\times\textbf{E}_0}{\omega\mu}\,;\hspace{15mm}\textbf{E}_0=\frac{-\textbf{k}\times\textbf{H}_0}{\omega\epsilon}
+\end{equation*}
+con $\textbf{k}=\bm{\beta}-j\bm{\alpha}$.\\
+Nel caso di onda piana uniforme $\textbf{k}=(\beta-j\alpha)\bm{\beta}_0=k\bm{\beta}_0$ e di conseguenza
+\begin{equation*}
+\textbf{H}_0=\frac{\bm{\beta}_0\times\textbf{E}_0}{\eta}\hspace{15mm}\textbf{E}_0=-\eta\bm{\beta}_0\times\textbf{H}_0
+\end{equation*}
+Osserviamo quindi che icomponenti di $\textbf{E}_0$ e $\textbf{H}_0$ di un'onda piana uniforme sono ortogonali
+\begin{itemize}
+\item[-] tra loro;
+\item[-] al vettore di propagazione;
+\item[-] al vettore di fase;
+\end{itemize}
+e, per un mezzo dissipativo, anche al vettore di attenuazione.
+\subsection*{Costante di propagazione}
+Per un'onda piana uniforme il parametro complesso $k=k_r-jk_j$ determina le caratteristiche di propagazione (progressione di fase) e di attenuazione.
+\begin{itemize}
+\item Mezzo dissipativo per conducibilità: $g\neq0$, $\epsilon$ e $\mu$ reali
+\begin{equation*}
+k=k_r-jk_j=\sqrt{-j\omega\mu(g+j\omega\epsilon)}
+\end{equation*}
+e le costanti di fase e attenuazione sono
+\begin{equation*}
+k_r=\omega\sqrt{\frac{\mu\epsilon}{2}\left[\sqrt{1+\left(\frac{g}{\omega\epsilon}\right)^2}+1\right]}
+\end{equation*}
+\begin{equation*}
+k_j=\omega\sqrt{\frac{\mu\epsilon}{2}\left[\sqrt{1+\left(\frac{g}{\omega\epsilon}\right)^2}-1\right]}
+\end{equation*}
+\begin{itemize}
+\item se $\frac{g}{\omega\epsilon}\ll 1$
+\begin{equation*}
+k_r\simeq\omega\sqrt{\mu\epsilon}\,;\hspace{15mm}k_j\simeq\frac{g}{2}\sqrt{\frac{\mu}{\epsilon}}
+\end{equation*}
+e il mezzo "si comporta da dielettrico";
+\item se, invece, $\frac{g}{\omega\epsilon}\gg 1$
+\begin{equation*}
+k_r\simeq k_j\simeq\sqrt{\frac{\omega\mu\epsilon}{2}}
+\end{equation*}
+e il mezzo "si comporta da conduttore".
+\end{itemize}
+Per cui il comportamento del mezzo non dipende solo dal valore dei parametri $g$ ed $\epsilon$, ma anche dalla frequenza:
+\begin{itemize}
+\item[$\rightarrow$] "alta": il mezzo tende al dielettrico;
+\item[$\rightarrow$] "bassa": il mezzo tende al conduttore.
+\end{itemize}
+\item Mezzo dielettrico dissipativo: $g=0$, $\epsilon$ complessa, $\mu$ reale
+\begin{equation*}
+k_r-jk_j=\omega\sqrt{\mu\epsilon_0(\epsilon'+j\epsilon'')}
+\end{equation*}
+se $|\epsilon''|\ll\epsilon'$
+\begin{equation*}
+k_r\simeq\omega\sqrt{\mu\epsilon_0\epsilon'}\,;\hspace{15mm}k_j\simeq\frac{\omega}{2}\sqrt{\mu\epsilon_0}\frac{|\epsilon''|}{\sqrt{\epsilon'}}
+\end{equation*}
+Dal punto di vista propagativo il mezzo può essere considerato privo di dissipazioni. Tuttavia, la presenza di $\omega$ a fattore nella costante di attenuazione può renderla molto elevata anche se $|\epsilon''|$ è bassa (è il caso della troposfera).
+\end{itemize}
+\subsection*{Impedenza intrinseca}
+Mezzo dissipativo per conducibilità: $g\neq 0$, $\epsilon$ e $\mu$ reali
+\begin{equation*}
+\eta=\eta_r+j\eta_j=\sqrt{\frac{\mu}{\epsilon}}\sqrt{\frac{1+j\frac{g}{\omega\epsilon}}{1+\left(\frac{g}{\omega\epsilon}\right)^2}}
+\end{equation*}
+\begin{itemize}
+\item[-] se il mezzo "si comporta come dielettrico"
+\begin{equation*}
+\eta_r\simeq\sqrt{\frac{\mu}{\epsilon}}\,;\hspace{15mm}\eta_j\simeq\frac{g\sqrt{\mu}}{2\omega\epsilon^{\frac{3}{2}}}
+\end{equation*}
+\item[-] se il mezzo "si comporta come conduttore"
+\begin{equation*}
+\eta_r\simeq\eta_j\simeq\sqrt{\frac{\omega\mu}{2g}}
+\end{equation*}
+per cui se $g\rightarrow\infty\,$, $\eta\rightarrow0$.
+\end{itemize}
 \end{document}
