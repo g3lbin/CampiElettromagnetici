@@ -5,6 +5,7 @@
 \usepackage{lmodern}
 \usepackage{amsmath} 
 \usepackage{graphicx}
+\usepackage{bm}
 \usepackage{esint} 
 
 \let\oldoiint\oiint
@@ -472,4 +473,104 @@ con $\textbf{n}_0$ normale principale della curva
 \end{equation*}
 la curvatura aumenta con $|\nabla n|$;\\
 il raggio elettromagnetico rimane localmente rettilineo se $\textbf{s}_0\parallel\nabla n$.
+\subsection*{Raggi in mezzi stratificati radialmente}
+Consideriamo un mezzo il cui indice di rifrazione abbia simmetria sferica, ovvero vari solo con la coordinata radiale (è il caso della troposfera).
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=0.5\linewidth]{im3}
+\end{figure}
+\begin{equation*}
+$$Dato che$$\nabla n=-|\nabla n|\textbf{R}_0
+\end{equation*}
+segue che
+\begin{equation*}
+\frac{1}{\rho}=\textbf{n}_0\cdot\frac{\nabla n}{n}=\frac{|\nabla n|}{n}\cos\psi=\frac{|\nabla n|}{n}\sin\theta
+\end{equation*}
+\subsection*{Principio di Fermat e lunghezza di percorso}
+Un raggio elettromagnetico che passa per due punti $P_1$ e $P_2$ è tale che la lunghezza
+$L$ del percorso elettromagnetico
+\begin{equation*}
+L=\int_{P_1}^{P_2}n(\textbf{r})ds
+\end{equation*}
+funzionale della traiettoria seguita tra $P_1$ e $P_2$, è stazionaria.\\
+Considerata una qualunque curva che congiunge i due punti, quella (o quelle) che
+rendono stazionario (generalmente minimo) il valore dell’integrale di linea dell’indice
+di rifrazione è (sono) la/le traiettoria/e dell’energia elettromagnetica.
+\paragraph*{Misura distanza}
+\begin{equation*}
+R=\frac{\tau\cdot c_0}{2}
+\end{equation*}
+$\tau$ tempo che l'energia elettromagnetica impiega tra 2 punti, la sua misura dà la distanza tra trasmettitore e ricevitore.
+\section{Onde piane}
+\subsection*{Onde piane in mezzi uniformi}
+Nel caso di un mezzo uniforme e non dissipativo,
+\begin{equation*}
+\nabla\phi=n\textbf{s}_0=cost
+\end{equation*}
+e l'energia elettromagnetica si propaga lungo traiettorie rettilinee.\\
+In un mezzo omogeneo la funzione eiconale vale
+\begin{equation*}
+\phi=n\int_{s_i}^sds=ns+cost
+\end{equation*}
+Per superfici d'onda $\phi=cost$ che siano dei piani (onde piane)
+\begin{equation*}
+\phi=\gamma_xx+\gamma_yy+\gamma_zz
+\end{equation*}
+L'onda piana è
+\begin{equation*}
+\textbf{E}(\textbf{r})=\textbf{E}_0e^{-j\textbf{k}\cdot\textbf{r}}
+\end{equation*}
+con $\textbf{k}=k_0\bm{\gamma}=k_0\nabla\phi$\\
+i parametri del mezzo, la posizione delle sorgenti determinano posizione e verso.\\\\
+Il \emph{vettore di propagazione} è in generale complesso
+\begin{equation*}
+\textbf{k}=\bm{\beta}-j\bm{\alpha}
+\end{equation*}
+e, più in generale, si distinguono due casi:
+\begin{itemize}
+\item mezzo senza dissipazioni,
+\begin{equation*}
+\textbf{k}\cdot\textbf{k}=\omega^2\mu\epsilon
+\end{equation*}
+e quindi necessariamente $-\alpha=0$ oppure $-\alpha\perp\beta$ e, inoltre, $\beta>\alpha$ ;
+\item mezzo con dissipazioni (parametri complessi),\\\\
+\begin{center}
+$\alpha\neq0$ ;\hspace{15mm}$\alpha\not\perp\beta$
+\end{center}
+\end{itemize}
+L'espressione generale di un'onda piana è dunque
+\begin{equation*}
+\textbf{E}(\textbf{r})=\textbf{E}_0e^{-j\textbf{k}\cdot\textbf{r}}=\textbf{E}_0e^{-j(\bm{\beta}-j\bm{\alpha})\cdot\textbf{r}}=\textbf{E}_0e^{-\bm{\alpha}\cdot\textbf{r}}\cdot e^{-j\bm{\beta}\cdot\textbf{r}}
+\end{equation*}
+in cui sono messi in evidenza
+\begin{itemize}
+\item \emph{fattore di ampiezza} $e^{-\bm{\alpha}\cdot\textbf{r}}$ ;
+\item \emph{fattore di fase} $e^{-j\bm{\beta}\cdot\textbf{r}}$ ;
+\end{itemize}
+dove
+\begin{itemize}
+\item[-] $\bm{\alpha}$ individua i piani equiampiezza $\bm{\alpha}\cdot\bm{r}=cost$ ad esso ortogonali;
+\item[-] $\bm{\beta}$ individua i piani equifase $\bm{\beta}\cdot\bm{r}=cost$ ad esso ortogonali.
+\end{itemize}
+Un'onda piana è \emph{uniforme} quando i piani equifase coincidono con quelli equiampiezza, cioè quando
+\begin{equation*}
+\bm{\alpha}=0\hspace{10mm}\text{oppure}\hspace{10mm}\bm{\alpha}\parallel\bm{\beta}
+\end{equation*}
+\begin{itemize}
+\item \emph{velocità di fase} nella direzione $\textbf{r}_0$ ad angolo $\theta$ con $\bm{\beta}$
+\begin{equation*}
+u\big|_{\bm{r}_0}=\frac{\omega}{\bm{r}_0\cdot\bm{\beta}}=\frac{\omega}{\beta\cos\theta}
+\end{equation*}
+\item \emph{velocità di propagazione} nella direzione $\bm{\beta}$ (ha valore minimo), dipende dall'uniformità dell'onda:
+\begin{itemize}
+\item per un'onda uniforme
+\begin{equation*}
+u\big|_{\bm{\beta}_0}=\frac{\omega}{\omega\sqrt{\mu\epsilon}}=\frac{1}{\sqrt{\mu\epsilon}}=c
+\end{equation*}
+\item per un'onda non uniforme
+\begin{equation*}
+u\big|_{\bm{\beta}_0}=\frac{\omega}{\beta}=\frac{\omega}{\sqrt{\omega^2\mu\epsilon+\alpha^2}}<c
+\end{equation*}
+\end{itemize}
+\end{itemize}
 \end{document}
