@@ -431,7 +431,7 @@ Se $\textbf{E}=\textbf{E}_0e^{-jk_0\phi(\textbf{r})}$, anche $\textbf{H}=\textbf
 Posto
 \begin{itemize}
 \item $\eta_0=\sqrt{\frac{\mu_0}{\epsilon_0}}$ \emph{impedenza intrinseca del vuoto};
-\item $\eta_0=\sqrt{\frac{\mu_0}{\epsilon}}$ \emph{impedenza intrinseca del mezzo};
+\item $\eta=\sqrt{\frac{\mu_0}{\epsilon}}$ \emph{impedenza intrinseca del mezzo};
 \end{itemize}
 Dalle prime due equazioni di Maxwell
 \begin{equation*}
@@ -451,7 +451,7 @@ componenti reali e immaginari di $\textbf{E}_0$ e $\textbf{H}_0$ sono ortogonali
 \subsection*{Raggi elettromagnetici}
 Vettore di Poynting
 \begin{equation*}
-\emph{\textbf{P}}=\frac{1}{2}\textbf{E}\times\textbf{H}^*=\frac{1}{2}\textbf{E}_0\times\textbf{H}_0^*=\frac{1}{2}\textbf{E}_0\times\frac{\textbf{s}_0\times\textbf{E}_0^*}{\eta}=\frac{1}{2}\frac{\textbf{E}_0\cdot\textbf{E}_0^*}{\eta}\,\textbf{s}_0
+\emph{\textbf{P}}=\frac{1}{2}\textbf{E}\times\textbf{H}^*=\frac{1}{2}\textbf{E}_0\times\textbf{H}_0^*=\frac{1}{2}\textbf{E}_0\times\frac{\textbf{s}_0\times\textbf{E}_0^*}{\eta^*}=\frac{1}{2}\frac{\textbf{E}_0\cdot\textbf{E}_0^*}{\eta^*}\,\textbf{s}_0
 \end{equation*}
 ha direzione e verso di $\textbf{s}_0$, versore ortogonale alle superfici d'onda $\phi(\textbf{r})=cost$, indicando che il trasporto di potenza avviene ortogonalmente alle $\phi(\textbf{r})=cost$. Curve ortogonali in ogni punto alle superfici d'onda sono traiettorie dell'energia elettromagnetica, denominate \emph{raggi elettromagnetici}.\\\\
 L’uso dei raggi elettromagnetici riduce il problema della propagazione da tridimen-
@@ -647,4 +647,71 @@ Mezzo dissipativo per conducibilità: $g\neq 0$, $\epsilon$ e $\mu$ reali
 \end{equation*}
 per cui se $g\rightarrow\infty\,$, $\eta\rightarrow0$.
 \end{itemize}
+\section{Riflessione e rifrazione delle onde piane}
+\subsection*{Incidenza normale}
+\subsubsection*{Materiale dielettrico}
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=0.4\linewidth]{im4}
+\end{figure}
+Due mezzi $M_1$ ed $M_2$ privi di dissipazioni con $\epsilon_1$ ed $\epsilon_2$ reali (di solito l'aria $\Rightarrow\epsilon_0,\,\mu_0$) ed $\epsilon_2,\,\mu_2$
+\begin{equation*}
+\textbf{E}(\textbf{r})=\textbf{E}_0e^{-j\beta z}\hspace{10mm}\textbf{E}'(\textbf{r})=\textbf{E}_0'e^{-j\beta'z}\hspace{10mm}\textbf{E}''(\textbf{r})=\textbf{E}_0''e^{-j\beta''z}
+\end{equation*}
+\\con
+\begin{itemize}
+\item $\bm{\beta}=\omega\sqrt{\mu\epsilon}\,\textbf{z}_0$\hspace{29mm}(incidente);
+\item $\bm{\beta}'=\omega\sqrt{\mu_2\epsilon_2}\,\textbf{z}_0$\hspace{25mm}(rifratta);
+\item $\bm{\beta}''=-\omega\sqrt{\mu\epsilon}\,\textbf{z}_0=-\bm{\beta}$\hspace{15mm}(riflessa);
+\end{itemize}
+da $M_1$ un'onda piana uniforme incide normalmente sul piano di separazione.\\\\
+I campi sono determinati dalle ($z=0$)
+\begin{equation*}
+\textbf{E}_0+\textbf{E}_0''=\textbf{E}_0'\hspace{10mm}\textbf{H}_0+\textbf{H}_0''=\textbf{H}_0'
+\end{equation*}
+i campi rifratti e riflessi hanno gli stessi $\textbf{e}_0$ e $\textbf{h}_0$.\\\\
+\begin{itemize}
+\item \emph{Coefficiente di riflessione}:
+\begin{equation*}
+q_E=\frac{E_0''}{E_0}=\frac{\eta_2-\eta_1}{\eta_2+\eta_1}
+\end{equation*}
+\underline{\textbf{N.B.}}\hspace{5mm}$q_E=q_H$ (sono nulli quando $\eta_1=\eta_2$
+\item \emph{Coefficiente di trasmissione}:
+\begin{equation*}
+t_E=\frac{E_{0i}'}{E_{0i}}=1+\frac{\eta_2-\eta_1}{\eta_2+\eta_1}=\frac{2\eta_2}{\eta_2+\eta_1}
+\end{equation*}
+\begin{equation*}
+t_H=\frac{H_{0i}'}{H_{0i}}=1-\frac{\eta_2-\eta_1}{\eta_2+\eta_1}=\frac{2\eta_1}{\eta_2+\eta_1}
+\end{equation*}
+\underline{\textbf{Oss:}}\hspace{5mm}$t_E=t_H=1$ se $\eta_1=\eta_2$
+\end{itemize}
+\subsubsection*{Materiale conduttore}
+\begin{equation*}
+\eta_2=\sqrt{\frac{\omega\mu_2}{2g}}+j\sqrt{\frac{\omega\mu_2}{2g}}
+\end{equation*}
+e quindi
+\begin{equation*}
+\frac{\eta_2}{\eta_1}=\sqrt{\frac{\omega\mu_2}{2g}\cdot\frac{\epsilon_1}{\mu_1}}+j\sqrt{\frac{\omega\mu_2}{2g}\cdot\frac{\epsilon_1}{\mu_1}}
+\end{equation*}
+poiché in genere $\mu_2\simeq\mu_1,\,\,\epsilon_2$ è dello stesso ordine di grandezza di $\epsilon_1$
+\begin{equation*}
+\Rightarrow q_E\simeq-1,\hspace{5mm}q_H\simeq-1,\hspace{5mm}t_E\simeq 0
+\end{equation*}
+L'onda incidente viene riflessa quasi completamente.\\\\
+Il campo elettrico in un materiale conduttore è praticamente nullo.\\
+Il campo magnetico tangenziale sulla superficie del conduttore è il doppio di quello incidente ma decade esponenzialmente con la profondità.\\\\
+Il campo elettromagnetico appena dentro il conduttore ideale è nullo.\\
+All'esterno: sovrapposizione di onda incidente e riflessa
+\begin{equation*}
+\textbf{E}_{tot}=\textbf{E}_0e^{-j\beta z}+\textbf{E}_0''e^{j\beta z}=\textbf{E}_0(e^{-j\beta z}-e^{j\beta z})=-2j\textbf{E}_0\sin\beta z
+\end{equation*}
+\begin{equation*}
+\textbf{H}_{tot}=\textbf{H}_0e^{-j\beta z}+\textbf{H}_0''e^{j\beta z}=\textbf{H}_0(e^{-j\beta z}+e^{j\beta z})=2\textbf{H}_0\cos\beta z
+\end{equation*}
+i campi non si propagano $\Rightarrow$ onde stazionarie.\\\\
+Il vettore di Poynting del campo totale è
+\begin{equation*}
+\emph{\textbf{P}}_{tot}=-j\frac{|E_0|^2}{\eta}\sin(2\beta z)\textbf{z}_0
+\end{equation*}
+è immaginario $\Rightarrow$ il campo totale non trasporta potenza.
 \end{document}
