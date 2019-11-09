@@ -772,7 +772,7 @@ La legge di Snell impone l'uguaglianza delle velocità di fase lungo $x$ di onda
 \subparagraph*{Determinazione dei coefficienti di riflessione\\\\}
 Sappiamo che il campo incidente può essere rappresentato da due vettori tra loro ortogonali e giacenti sul piano perpendicolare a $\bm{\beta}$
 \begin{equation*}
-\textbf{E}_0=\textbf{E}_{0h}+\textbf{E}_{0v}=\textbf{E}_{0y}\textbf{y}_0+\textbf{E}_{0v}\textbf{v}_0\hspace{10mm}\text{con}\hspace{5mm}\textbf{v}_0=\textbf{x}_0\cos\theta-\textbf{z}_0\sin\theta
+\textbf{E}_0=\textbf{E}_{0h}+\textbf{E}_{0v}=E_{0y}\textbf{y}_0+E_{0v}\textbf{v}_0\hspace{10mm}\text{con}\hspace{5mm}\textbf{v}_0=\textbf{x}_0\cos\theta-\textbf{z}_0\sin\theta
 \end{equation*}
 Il campo magnetico corrispondente è
 \begin{equation*}
@@ -780,4 +780,48 @@ Il campo magnetico corrispondente è
 \end{equation*}
 (espressioni analoghe si hanno per l'onda riflessa e per quella rifratta).\\\\
 Pertanto, le condizioni al contorno proiettate sugli assi danno
+\begin{itemize}
+\item per la componente orizzontale del campo elettrico si ha
+\begin{equation*}
+\frac{\cos\theta}{\eta_1}(E_{0}y''-E_{0y})=-\frac{E_{0y}+E_{0y}''}{\eta_2}\cos\theta'
+\end{equation*}
+da cui
+\begin{equation*}
+q_{Eh}=\frac{E_{0y}''}{E_{0y}}=\frac{\eta_2\cos\theta-\eta_1\cos\theta'}{\eta_2\cos\theta+\eta_1\cos\theta'}=\frac{\cos\theta-\frac{1}{n_{21}}\frac{\eta_1}{\eta_2}\sqrt{n_{21}^2-\sin^2\theta}}{\cos\theta+\frac{1}{n_{21}}\frac{\eta_1}{\eta_2}\sqrt{n_{21}^2-\sin^2\theta}}\,\,\,(\text{per la legge di Snell})
+\end{equation*}
+dove $n_{21}$ è l'indice di rifrazione relativo pari a $\frac{n_2}{n_1}$.\\\\
+Per incidenza dall'aria su un dielettrico
+\begin{equation*}
+q_{Eh}\simeq\frac{\cos\theta-\sqrt{\epsilon_r-\sin^2\theta}}{\cos\theta+\sqrt{\epsilon_r-\sin^2\theta}}
+\end{equation*}
+per $\theta\rightarrow\frac{\pi}{2}\,\,\,\Rightarrow\,\,\,q_{Eh}\rightarrow0$;
+\item per la componente verticale del campo elettrico si ha
+\begin{equation*}
+\eta_1(E_{0v}\cos\theta-E_{0v}''\cos\theta)=\eta_2(E_{0v}\cos\theta'-E_{0v}''\cos\theta')
+\end{equation*}
+da cui
+\begin{equation*}
+q_{Ev}=\frac{E_{0v}''}{E_{0v}}=\frac{\eta_1\cos\theta-\eta_2\cos\theta'}{\eta_1\cos\theta+\eta_2\cos\theta'}=\frac{\cos\theta-\frac{1}{n_{21}}\frac{\eta_2}{\eta_1}\sqrt{n_{21}^2-\sin^2\theta}}{\cos\theta+\frac{1}{n_{21}}\frac{\eta_2}{\eta_1}\sqrt{n_{21}^2-\sin^2\theta}}\,\,\,(\text{per la legge di Snell})
+\end{equation*}
+Per incidenza dall'aria su un dielettrico
+\begin{equation*}
+q_{Ev}=\frac{\epsilon_r\cos\theta-\sqrt{\epsilon_r-\sin^2\theta}}{\epsilon_r\cos\theta+\sqrt{\epsilon_r-\sin^2\theta}}
+\end{equation*}
+$\exists\,\,\theta_B$ (angolo di Brewstel) tale per cui $q_{Ev}=0$ e
+\begin{equation*}
+n_{21}\eta_1\cos\theta_B=\eta_2\sqrt{n_{21}^2-\sin^2\theta_B}
+\end{equation*}
+Nell'ipotesi di mezzi dielettrici, $\mu_2\simeq\mu_1\simeq\mu_0$ e
+\begin{equation*}
+\cos\theta_B=\frac{\epsilon_1}{\epsilon_2}\sqrt{\frac{\epsilon_2}{\epsilon_1}-\sin^2\theta_B}\hspace*{5mm}\text{da cui}\hspace{5mm}\sin\theta_B=\sqrt{\frac{\epsilon_2}{\epsilon_1+\epsilon_2}}
+\end{equation*}
+\end{itemize}
+\subparagraph*{Espressione delleonde riflessa e rifratta\\}
+\begin{equation*}
+\textbf{E}''=[q_{Eh}(\theta)\textbf{E}_{0h}+q_{Ev}(\theta)E_{0v}\textbf{v}_0'']e^{-j(\beta_xx-\beta_zz)}
+\end{equation*}
+\begin{equation*}
+\textbf{E}'=[t_{Eh}(\theta)\textbf{E}_{0h}+t_{Ev}(\theta)E_{0v}\textbf{v}_0']e^{-j(\beta_x'x-\beta_z'z)}
+\end{equation*}
+Dato che $q_{Eh}\neq q_{Ev}$ tranne che per $\theta=0$ o $\theta\rightarrow\frac{\pi}{2}$, lo stato di polarizzazione dell'onda riflessa è in generale diverso da quello dell'onda incidente. In particolare, indipendentemente dalla polarizzazione dell'onda incidente, l'onda riflessa è polarizzata orizzontalmente quando $\theta=\theta_B$.
 \end{document}
