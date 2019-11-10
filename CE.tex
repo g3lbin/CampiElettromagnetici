@@ -762,7 +762,7 @@ e^{-j\beta_xx}=e^{-j\beta_x''x}=e^{-j\beta_x'x}
 \Rightarrow\,\,\,\beta_x=\beta_x''=\beta_x'\,\,\,\Rightarrow\,\,\,
 \begin{cases}
 \text{\emph{legge di Erone}:}\hspace{4mm}\theta=\theta''\\
-\text{\emph{legge di Snell}:}\hspace{5mm}\frac{\sin\theta}{\sin\theta''}=\frac{\beta'}{\beta}\\
+\text{\emph{legge di Snell}:}\hspace{5mm}\frac{\sin\theta}{\sin\theta'}=\frac{\beta'}{\beta}\\
 \end{cases}
 \end{equation*}
 La legge di Snell impone l'uguaglianza delle velocità di fase lungo $x$ di onda incidente e rifratta
@@ -780,14 +780,25 @@ Il campo magnetico corrispondente è
 \end{equation*}
 (espressioni analoghe si hanno per l'onda riflessa e per quella rifratta).\\\\
 Pertanto, le condizioni al contorno proiettate sugli assi danno
+\begin{equation*}
+\begin{array}{lr}
+E_{0y}+E_{0y}''=E_{0y}'\\
+E_{0v}\cos\theta-E_{0v}''\cos\theta=E_{0v}'\cos\theta'\\
+-\frac{E_{0y}}{\eta_1}\cos\theta+\frac{E_{0y}''}{\eta_1}\cos\theta=-\frac{E_{0y}'}{\eta_2}\cos\theta'\\
+\frac{E_{0v}}{\eta_1}+\frac{E_{0v}''}{\eta_1}=\frac{E_{0v}'}{\eta_2}\\
+\end{array}
+\end{equation*}
 \begin{itemize}
 \item per la componente orizzontale del campo elettrico si ha
 \begin{equation*}
-\frac{\cos\theta}{\eta_1}(E_{0}y''-E_{0y})=-\frac{E_{0y}+E_{0y}''}{\eta_2}\cos\theta'
+\frac{\cos\theta}{\eta_1}(E_{0y}''-E_{0y})=-\frac{E_{0y}+E_{0y}''}{\eta_2}\cos\theta'
 \end{equation*}
 da cui
 \begin{equation*}
-q_{Eh}=\frac{E_{0y}''}{E_{0y}}=\frac{\eta_2\cos\theta-\eta_1\cos\theta'}{\eta_2\cos\theta+\eta_1\cos\theta'}=\frac{\cos\theta-\frac{1}{n_{21}}\frac{\eta_1}{\eta_2}\sqrt{n_{21}^2-\sin^2\theta}}{\cos\theta+\frac{1}{n_{21}}\frac{\eta_1}{\eta_2}\sqrt{n_{21}^2-\sin^2\theta}}\,\,\,(\text{per la legge di Snell})
+\begin{array}{lr}
+q_{Eh}=\frac{E_{0y}''}{E_{0y}}=\frac{\eta_2\cos\theta-\eta_1\cos\theta'}{\eta_2\cos\theta+\eta_1\cos\theta'}=\frac{\cos\theta-\frac{1}{n_{21}}\frac{\eta_1}{\eta_2}\sqrt{n_{21}^2-\sin^2\theta}}{\cos\theta+\frac{1}{n_{21}}\frac{\eta_1}{\eta_2}\sqrt{n_{21}^2-\sin^2\theta}}\,\,\,(\text{per la legge di Snell})\\\\
+t_{Eh}=\frac{E_{0y}'}{E_{0y}}=\frac{2\cos\theta}{\cos\theta+\frac{1}{n_{21}}\frac{\eta_1}{\eta_2}\sqrt{n_{21}^2-\sin^2\theta}}\\
+\end{array}
 \end{equation*}
 dove $n_{21}$ è l'indice di rifrazione relativo pari a $\frac{n_2}{n_1}$.\\\\
 Per incidenza dall'aria su un dielettrico
@@ -797,11 +808,14 @@ q_{Eh}\simeq\frac{\cos\theta-\sqrt{\epsilon_r-\sin^2\theta}}{\cos\theta+\sqrt{\e
 per $\theta\rightarrow\frac{\pi}{2}\,\,\,\Rightarrow\,\,\,q_{Eh}\rightarrow0$;
 \item per la componente verticale del campo elettrico si ha
 \begin{equation*}
-\eta_1(E_{0v}\cos\theta-E_{0v}''\cos\theta)=\eta_2(E_{0v}\cos\theta'-E_{0v}''\cos\theta')
+\eta_1(E_{0v}\cos\theta-E_{0v}''\cos\theta)=\eta_2(E_{0v}\cos\theta'+E_{0v}''\cos\theta')
 \end{equation*}
 da cui
 \begin{equation*}
-q_{Ev}=\frac{E_{0v}''}{E_{0v}}=\frac{\eta_1\cos\theta-\eta_2\cos\theta'}{\eta_1\cos\theta+\eta_2\cos\theta'}=\frac{\cos\theta-\frac{1}{n_{21}}\frac{\eta_2}{\eta_1}\sqrt{n_{21}^2-\sin^2\theta}}{\cos\theta+\frac{1}{n_{21}}\frac{\eta_2}{\eta_1}\sqrt{n_{21}^2-\sin^2\theta}}\,\,\,(\text{per la legge di Snell})
+\begin{array}{lr}
+q_{Ev}=\frac{E_{0v}''}{E_{0v}}=\frac{\eta_1\cos\theta-\eta_2\cos\theta'}{\eta_1\cos\theta+\eta_2\cos\theta'}=\frac{\cos\theta-\frac{1}{n_{21}}\frac{\eta_2}{\eta_1}\sqrt{n_{21}^2-\sin^2\theta}}{\cos\theta+\frac{1}{n_{21}}\frac{\eta_2}{\eta_1}\sqrt{n_{21}^2-\sin^2\theta}}\,\,\,(\text{per la legge di Snell})\\\\
+t_{Ev}=\frac{2\cos\theta}{\frac{\eta_1}{\eta_2}\cos\theta+\frac{1}{n_{21}}\sqrt{n_{21}^2-\sin^2\theta}}\\
+\end{array}
 \end{equation*}
 Per incidenza dall'aria su un dielettrico
 \begin{equation*}
@@ -821,7 +835,54 @@ Nell'ipotesi di mezzi dielettrici, $\mu_2\simeq\mu_1\simeq\mu_0$ e
 \textbf{E}''=[q_{Eh}(\theta)\textbf{E}_{0h}+q_{Ev}(\theta)E_{0v}\textbf{v}_0'']e^{-j(\beta_xx-\beta_zz)}
 \end{equation*}
 \begin{equation*}
-\textbf{E}'=[t_{Eh}(\theta)\textbf{E}_{0h}+t_{Ev}(\theta)E_{0v}\textbf{v}_0']e^{-j(\beta_x'x-\beta_z'z)}
+\textbf{E}'=[t_{Eh}(\theta)\textbf{E}_{0h}+t_{Ev}(\theta)E_{0v}\textbf{v}_0']e^{-j(\beta_x'x+\beta_z'z)}
 \end{equation*}
+con\hspace{5mm}$\textbf{v}_0''=-\textbf{x}_0\cos\theta-\textbf{z}_0\sin\theta$\hspace{5mm}e\hspace{5mm}$\textbf{v}_0'=\textbf{x}_0\cos\theta'-\textbf{z}_0\sin\theta'$.\\\\
 Dato che $q_{Eh}\neq q_{Ev}$ tranne che per $\theta=0$ o $\theta\rightarrow\frac{\pi}{2}$, lo stato di polarizzazione dell'onda riflessa è in generale diverso da quello dell'onda incidente. In particolare, indipendentemente dalla polarizzazione dell'onda incidente, l'onda riflessa è polarizzata orizzontalmente quando $\theta=\theta_B$.
+\subsubsection*{Materiale dissipativo}
+Mezzo dissipativo per effetto della conducibilità ($g\neq0$).\\
+Campi incidente e riflesso
+\begin{equation*}
+\textbf{E}=\textbf{E}_0e^{-j(\beta_xx+\beta_zz)}
+\end{equation*}
+\begin{equation*}
+\textbf{H}=\textbf{H}_0e^{-j(\beta_xx+\beta_zz)}
+\end{equation*}
+\begin{equation*}
+\textbf{E}''=\textbf{E}_0''e^{-j(\beta_xx-\beta_zz)}
+\end{equation*}
+\begin{equation*}
+\textbf{H}''=\textbf{H}_0''e^{-j(\beta_xx-\beta_zz)}
+\end{equation*}
+mentre il campo rifratto è caratterizzato dal vettore di propagazione complesso
+\begin{equation*}
+\textbf{E}'=\textbf{E}_0'e^{-\bm{\alpha}'\cdot\textbf{r}-j\bm{\beta}'\cdot\textbf{r}}
+\end{equation*}
+\begin{equation*}
+\textbf{H}'=\textbf{H}_0'e^{-\bm{\alpha}'\cdot\textbf{r}-j\bm{\beta}'\cdot\textbf{r}}
+\end{equation*}
+Per la continuità, a $z=0$ si ha
+\begin{equation*}
+e^{-j\textbf{k}\cdot\textbf{r}}=e^{-j\textbf{k}'\cdot\textbf{r}}
+\end{equation*}
+ovvero
+\begin{equation*}
+e^{-j\beta_xx}=e^{-(\alpha_x'x+j\beta_x'x)}\hspace{10mm}\forall x
+\end{equation*}
+condizione sugli esponenti
+\begin{equation*}
+-j\beta_x=-\alpha_x'-j\beta_x'
+\end{equation*}
+\begin{equation*}
+\alpha_x'=0\,;\hspace{15mm}\beta_x'=\beta_x
+\end{equation*}
+Di conseguenza
+\begin{equation*}
+\bm{\alpha}'=\alpha'\textbf{z}_0\,;\hspace{15mm}\beta_x'=\beta'\sin\theta'=\beta\sin\theta
+\end{equation*}
+Per cui
+\begin{equation*}
+\bm{\alpha}'\not\parallel\bm{\beta}'\hspace{5mm}\Rightarrow\hspace{5mm}\text{l'onda nel materiale conduttore \underline{non} è uniforme.}
+\end{equation*}
+\subsection*{Riflessione totale}
 \end{document}
