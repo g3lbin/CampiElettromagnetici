@@ -885,4 +885,61 @@ Per cui
 \bm{\alpha}'\not\parallel\bm{\beta}'\hspace{5mm}\Rightarrow\hspace{5mm}\text{l'onda nel materiale conduttore \underline{non} è uniforme.}
 \end{equation*}
 \subsection*{Riflessione totale}
+Mezzi privi di dissipazioni.\\
+Incidenza obliqua con la seguente ipotesi
+\begin{equation*}
+\sqrt{\mu_1\epsilon_1}>\sqrt{\mu_2\epsilon_2}
+\end{equation*}
+La continuità dei componenti tangenziali dei campi richiede che
+\begin{equation*}
+\sin\theta'=\frac{\sin\theta}{n_{21}}=\sqrt{\frac{\mu_1\epsilon_1}{\mu_2\epsilon_2}}\sin\theta
+\end{equation*}
+quindi per la nostra ipotesi notiamo che $\theta'>\theta$.
+Ne consegue che all'aumentare dell'angolo di incidenza, la direzione di $\bm{\beta}'$ si allontana sempre di più dalla normale alla superficie di discontinuità, avvicinandosi ad $\textbf{x}_0$.\\\\
+In particolare per $\theta=\theta_L$ (angolo limite)
+\begin{equation*}
+\sin\theta_L=\sqrt{\frac{\mu_2\epsilon_2}{\mu_1\epsilon_1}}
+\end{equation*}
+l'onda rifratta si propaga parallelamente al piano di discontinuità.\\
+Oltrepassando $\theta_L$ la continuità dei componenti tangenziali dei campi non è più assicurata poiché la velocità di fase lungo $x$ dell'onda incidente è più bassa della minima velocità di fase che un'onda uniforme può avere nel secondo mezzo:
+\begin{equation*}
+\frac{\omega}{\beta\sin\theta}<\frac{\omega}{\beta'}\hspace{5mm}\text{per }\,\theta>\theta_L
+\end{equation*}
+Un'onda rifratta non uniforme ha velocità di fase
+\begin{equation*}
+u'=\frac{\omega}{\beta'}=\frac{\omega}{\sqrt{\alpha'^2+k'^2}}<\frac{1}{\sqrt{\mu_2\epsilon_2}}
+\end{equation*}
+Per il secondo mezzoprivo di dissipazioni
+\begin{equation*}
+\textbf{E}'=\textbf{E}_0'e^{-\alpha'z'-j\beta'x}
+\end{equation*}
+\begin{equation*}
+\beta'=\sqrt{\alpha'^2+\omega^2\mu_2\epsilon_2}=\omega\sqrt{\mu_1\epsilon_1}\sin\theta
+\end{equation*}
+\begin{equation*}
+\alpha'=\omega\sqrt{\mu_1\epsilon_1}\sqrt{\sin^2\theta-\frac{\mu_2\epsilon_2}{\mu_1\epsilon_1}}
+\end{equation*}
+Le espressioni dei campi nel secondo mezzo sono quindi
+\begin{equation*}
+\textbf{E}'=\textbf{E}_0'e^{-\omega\sqrt{\mu_1\epsilon_1}\left(\sqrt{\sin^2\theta-n_{21}^2}\,z+j\sin\theta\,x\right)}
+\end{equation*}
+\begin{equation*}
+\textbf{H}_0=\frac{(\beta'\textbf{x}_0-j\alpha'\textbf{z}_0)\times\textbf{E}_0'}{\omega\mu_2}
+\end{equation*}
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=0.4\linewidth]{im7}
+\end{figure}
+\subsubsection*{Trasporto di potenza}
+Per comodità assumiamo l'onda incidente polarizzata orizzontalment $\,\Rightarrow\,$ per continuità anche l'onda rifratta lo è
+\begin{equation*}
+\textbf{E}_0'=E_0'\textbf{y}_0
+\end{equation*}
+\begin{equation*}
+\textbf{H}_0'=\frac{\beta'E_0'}{\omega\mu_2}\textbf{z}_0+j\frac{\alpha'E_0'}{\omega\mu_2}\textbf{x}_0
+\end{equation*}
+\begin{equation*}
+\emph{\textbf{P}'}=\frac{1}{2}j|E_0'|^2\frac{\alpha'}{\omega\mu_2}e^{-2\alpha'z}\textbf{z}_0+\frac{1}{2}|E_0'|^2\frac{\beta'}{\omega\mu_2}e^{-2\alpha'z}\textbf{x}_0
+\end{equation*}
+il termine diretto verso $\textbf{z}_0$ è immaginario mentre quello diretto verso $\textbf{x}_0$ è reale $\,\Rightarrow\,$ quando l'angolo di incidenza supera l'angolo limite non vi è flusso di potenza attraverso il piano di separazione ma la potenza fluisce parallelamente ad esso.
 \end{document}
