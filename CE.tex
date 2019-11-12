@@ -797,7 +797,7 @@ da cui
 \begin{equation*}
 \begin{array}{lr}
 q_{Eh}=\frac{E_{0y}''}{E_{0y}}=\frac{\eta_2\cos\theta-\eta_1\cos\theta'}{\eta_2\cos\theta+\eta_1\cos\theta'}=\frac{\cos\theta-\frac{1}{n_{21}}\frac{\eta_1}{\eta_2}\sqrt{n_{21}^2-\sin^2\theta}}{\cos\theta+\frac{1}{n_{21}}\frac{\eta_1}{\eta_2}\sqrt{n_{21}^2-\sin^2\theta}}\,\,\,(\text{per la legge di Snell})\\\\
-t_{Eh}=\frac{E_{0y}'}{E_{0y}}=\frac{2\cos\theta}{\cos\theta+\frac{1}{n_{21}}\frac{\eta_1}{\eta_2}\sqrt{n_{21}^2-\sin^2\theta}}\\
+t_{Eh}=\frac{E_{0y}'}{E_{0y}}=\frac{2\eta_2\cos\theta}{\eta_2\cos\theta+\eta_1\cos\theta'}=\frac{2\cos\theta}{\cos\theta+\frac{1}{n_{21}}\frac{\eta_1}{\eta_2}\sqrt{n_{21}^2-\sin^2\theta}}\\
 \end{array}
 \end{equation*}
 dove $n_{21}$ è l'indice di rifrazione relativo pari a $\frac{n_2}{n_1}$.\\\\
@@ -814,7 +814,7 @@ da cui
 \begin{equation*}
 \begin{array}{lr}
 q_{Ev}=\frac{E_{0v}''}{E_{0v}}=\frac{\eta_1\cos\theta-\eta_2\cos\theta'}{\eta_1\cos\theta+\eta_2\cos\theta'}=\frac{\cos\theta-\frac{1}{n_{21}}\frac{\eta_2}{\eta_1}\sqrt{n_{21}^2-\sin^2\theta}}{\cos\theta+\frac{1}{n_{21}}\frac{\eta_2}{\eta_1}\sqrt{n_{21}^2-\sin^2\theta}}\,\,\,(\text{per la legge di Snell})\\\\
-t_{Ev}=\frac{2\cos\theta}{\frac{\eta_1}{\eta_2}\cos\theta+\frac{1}{n_{21}}\sqrt{n_{21}^2-\sin^2\theta}}\\
+t_{Ev}=\frac{E_{0v}'}{E_{0v}}=\frac{2\eta_2\cos\theta}{\eta_1\cos\theta+\eta_2\cos\theta'}=\frac{2\cos\theta}{\frac{\eta_1}{\eta_2}\cos\theta+\frac{1}{n_{21}}\sqrt{n_{21}^2-\sin^2\theta}}\\
 \end{array}
 \end{equation*}
 Per incidenza dall'aria su un dielettrico
@@ -909,7 +909,7 @@ Un'onda rifratta non uniforme ha velocità di fase
 \begin{equation*}
 u'=\frac{\omega}{\beta'}=\frac{\omega}{\sqrt{\alpha'^2+k'^2}}<\frac{1}{\sqrt{\mu_2\epsilon_2}}
 \end{equation*}
-Per il secondo mezzoprivo di dissipazioni
+Per il secondo mezzo privo di dissipazioni
 \begin{equation*}
 \textbf{E}'=\textbf{E}_0'e^{-\alpha'z'-j\beta'x}
 \end{equation*}
@@ -930,8 +930,9 @@ Le espressioni dei campi nel secondo mezzo sono quindi
 \centering
 \includegraphics[width=0.4\linewidth]{im7}
 \end{figure}
+\\l'onda del campo rifratto si propaga in direzione $\parallel$ al piano di discontinuità $\,\Rightarrow\,\,\theta'=\frac{\pi}{2}$
 \subsubsection*{Trasporto di potenza}
-Per comodità assumiamo l'onda incidente polarizzata orizzontalment $\,\Rightarrow\,$ per continuità anche l'onda rifratta lo è
+Per comodità assumiamo l'onda incidente polarizzata orizzontalmente $\,\Rightarrow\,$ per continuità anche l'onda rifratta lo è
 \begin{equation*}
 \textbf{E}_0'=E_0'\textbf{y}_0
 \end{equation*}
