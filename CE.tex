@@ -275,6 +275,10 @@ $N_{O_2}$ singoli modi di polarizzazione:
 \hspace*{4mm}\epsilon''(\omega)=\sum_{i=1}^{N_{H_2O}}\left[S''F''(\omega)\right]_i+\sum_{i=1}^{N_{O_2}}\left[S''F''(\omega)\right]_i+\overline{\epsilon''}
 \end{equation*}
 Osserviamo che la parte immaginaria della costante dielettrica nasce quando siamo in presenza di dissipazioni, come in questo caso.
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=0.7\linewidth]{im8}
+\end{figure}
 \subsection*{Mezzi conduttori}
 Qui vi sono delle cariche libere di muoversi (corrente di conduzione) e c'è dissipazione.\\
 La costante dielettrica relativa nel dominio della frequenza è data da
@@ -406,13 +410,13 @@ Campo
 \textbf{E}(\textbf{r},t)=Re\left[\textbf{E}(\textbf{r})e^{j\omega t}\right]=Re\left[\textbf{E}_0e^{-j[k_0\phi(\textbf{r})-\omega t]}\right]
 \end{equation*}
 \begin{equation*}
-\Rightarrow E_{0_i}(r,t)=E_{0_i}\cos(k_0\phi(r)-\omega t)\hspace{15mm}i=x,y,z
+\Rightarrow E_{i}(r,t)=E_{0_i}\cos(k_0\phi(r)-\omega t)\hspace{15mm}i=x,y,z
 \end{equation*}
 \begin{figure}[ht] 
 \centering
 \includegraphics[width=0.7\linewidth]{im5}
 \end{figure}
-Se il tempo varia di $dt$, lo spostamento $dr$ lungo $\textbf{r}_0$ che annulla il differenziale è
+\\Se il tempo varia di $dt$, lo spostamento $dr$ lungo $\textbf{r}_0$ che annulla il differenziale è
 \begin{equation*}
 k_0(\nabla\phi)\cdot\textbf{r}_0dr-\omega dt=0
 \end{equation*}
@@ -943,4 +947,38 @@ Per comodità assumiamo l'onda incidente polarizzata orizzontalmente $\,\Rightar
 \emph{\textbf{P}'}=\frac{1}{2}j|E_0'|^2\frac{\alpha'}{\omega\mu_2}e^{-2\alpha'z}\textbf{z}_0+\frac{1}{2}|E_0'|^2\frac{\beta'}{\omega\mu_2}e^{-2\alpha'z}\textbf{x}_0
 \end{equation*}
 il termine diretto verso $\textbf{z}_0$ è immaginario mentre quello diretto verso $\textbf{x}_0$ è reale $\,\Rightarrow\,$ quando l'angolo di incidenza supera l'angolo limite non vi è flusso di potenza attraverso il piano di separazione ma la potenza fluisce parallelamente ad esso.
+\section{Irradiazione}
+\subsection*{Il collegamento radio}
+Due antenne $A_1$ e $A_2$ a distanza "grande"
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=0.8\linewidth]{im9}
+\end{figure}
+\begin{equation*}
+W_2=A_{e2}\emph{P}_1
+\end{equation*}
+$\emph{P}_1$ è la densità superficiale di potenza che $A_1$ crea sul piano di bocca di $A_2$
+\begin{equation*}
+\emph{P}_1=\frac{1}{2}E_1H_1^*=\frac{1}{2}E_{10}H_{10}^*e^{-2\int_0^Rk_j(\lambda,s)ds}=\frac{P_1}{R_2}e^{-2\int_0^Rk_j(\lambda,s)ds}
+\end{equation*}
+se $E_{10}$ e $H_{10}$ sono i campi in assenza di attenuazione;\\
+$k_j$ è l'attenuazione specifica del mezzo attraversato
+\begin{equation*}
+\emph{P}_1=\frac{D_1W_1}{4\pi R^2}e^{-2\int_0^Rk_j(\lambda,s)ds}
+\end{equation*}
+coefficiente di trasmissione tra le due antenne:
+\begin{equation*}
+T_{12}=\frac{W_2}{W_1}=\frac{D_1A_{e2}}{4\pi R^2}e^{-2\int_0^Rk_j(\lambda,s)ds}
+\end{equation*}
+se le antenne sono ad apertuta, in funzione dell'area geometrica delle antenne
+\begin{equation*}
+T_{12}=\eta_{A_1}\eta_{A_2}\frac{A_{g1}A_{g2}}{(\lambda R)^2}e^{-2\int_0^Rk_j(\lambda,s)ds}
+\end{equation*}
+Il coefficiente di trasmissione
+\begin{itemize}
+\item cresce con le dimensioni delle antenne;
+\item decresce con il quadrato della distanza;
+\item cresce con la frequenza, a meno che il fattore di attenuazione, che dipede da essa, non ne alteri la dipendenza;
+\item non dipende dal verso di trasmissione (se il mezzo è reciproco). 
+\end{itemize}
 \end{document}
