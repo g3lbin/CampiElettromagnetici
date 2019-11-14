@@ -278,6 +278,7 @@ Osserviamo che la parte immaginaria della costante dielettrica nasce quando siam
 \begin{figure}[ht] 
 \centering
 \includegraphics[width=0.7\linewidth]{im8}
+\caption{Parte reale e immaginaria della costante dielettrica dell'atmosfera in condizioni \emph{standard}. Si noti che $|\epsilon'-1|$ e $|\epsilon''|$ descrescono con la quota.}
 \end{figure}
 \subsection*{Mezzi conduttori}
 Qui vi sono delle cariche libere di muoversi (corrente di conduzione) e c'è dissipazione.\\
@@ -639,6 +640,11 @@ k_r\simeq\omega\sqrt{\mu\epsilon_0\epsilon'}\,;\hspace{15mm}k_j\simeq\frac{\omeg
 \end{equation*}
 Dal punto di vista propagativo il mezzo può essere considerato privo di dissipazioni. Tuttavia, la presenza di $\omega$ a fattore nella costante di attenuazione può renderla molto elevata anche se $|\epsilon''|$ è bassa (è il caso della troposfera).
 \end{itemize}
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=0.8\linewidth]{im13}
+\caption{Attenuazione in decibel dovuta alla sola atmosfera su un percorso verticale tra un punto al livello del mare e un satellite allo zenit.}
+\end{figure}
 \subsection*{Impedenza intrinseca}
 Mezzo dissipativo per conducibilità: $g\neq 0$, $\epsilon$ e $\mu$ reali
 \begin{equation*}
@@ -948,6 +954,162 @@ Per comodità assumiamo l'onda incidente polarizzata orizzontalmente $\,\Rightar
 \end{equation*}
 il termine diretto verso $\textbf{z}_0$ è immaginario mentre quello diretto verso $\textbf{x}_0$ è reale $\,\Rightarrow\,$ quando l'angolo di incidenza supera l'angolo limite non vi è flusso di potenza attraverso il piano di separazione ma la potenza fluisce parallelamente ad esso.
 \section{Irradiazione}
+Campo prodotto da una sorgente elettrica "puntiforme" in un mezzo omogeneo privo di dissipazioni
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=0.4\linewidth]{im10}
+\end{figure}
+\\i raggi elettromagnetici scaturiscono dal punto in cui è posta la sorgente.
+\begin{equation*}
+\textbf{E}(\textbf{r})=\textbf{E}_0e^{-jk_0\phi(r)}
+\end{equation*}
+con $\,\,\,\textbf{E}_0\perp\textbf{H}_0\perp\textbf{r}_0\parallel\emph{\textbf{P}}$.\\
+Nel mezzo omogeneo privo di dissipazioni $\phi(r)=nr\,\,\,\Rightarrow\,\,\,k_0\phi(r)=kr$ e considerata la generica sfera $S$ centrata sulla sorgente, per la conservazione dell'energia si ha
+\begin{equation*}
+Re\left[\oiint_S\frac{\textbf{E}\times\textbf{H}^*}{2}\cdot\textbf{n}\,dS\right]=Re\left[\oiint_S\frac{\textbf{E}_0\times\textbf{H}_0^*}{2}\cdot\textbf{n}\,dS\right]=cost\,\,\,\forall S
+\end{equation*}
+$\Rightarrow\,\,\,E_0$ e $H_0$ devono decrescere come $\frac{1}{r}$, inoltre i loro valori iniziali dipendono dalla corrente di sorgente.
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=0.4\linewidth]{im11}
+\end{figure}
+\\Assunta $\textbf{J}_i=J_i\textbf{z}_0$, se $J_i$ è indipendente da $\varphi$ (simmetria assiale), allora lo sono anche $\textbf{E}_0$ e $\textbf{H}_0$, ma dipendono in generale da $\theta$ oltre che da $r$.\\\\
+Definito il \emph{momento della sorgente}:
+\begin{equation*}
+\emph{\textbf{M}}=\emph{M}\textbf{z}_0=\iiint_{V'}\textbf{J}_i(\textbf{r}')\,dV
+\end{equation*}
+il campo elettromagnetico irradiato è
+\begin{equation*}
+\textbf{E}=\frac{\eta\emph{M}}{2\pi r^2}\left(1+\frac{1}{jkr}\right)e^{-jkr}\cos\theta\,\textbf{r}_0
+\end{equation*}
+\begin{equation*}
+\hspace*{17mm}+\frac{j\omega\mu\emph{M}}{4\pi r}\left(1+\frac{1}{jkr}-\frac{1}{k^2r^2}\right)e^{-jkr}\sin\theta\,\bm{\theta}_0
+\end{equation*}
+\begin{equation*}
+\textbf{H}=\frac{jk\emph{M}}{4\pi r}\left(1+\frac{1}{jkr}\right)e^{-jkr}\sin\theta\,\bm{\phi}_0
+\end{equation*}
+proporzionale a \emph{M}.
+\begin{itemize}
+\item $\textbf{H}$ è ortogonale alla direzione della sorgente e alla direzione radiale;
+\item $\textbf{E}$ giace in un piano meridiano, contenente la direzione della sorgente.
+\end{itemize}
+Le espressioni dei campi contengono somme di potenze di $\frac{1}{jkr}=\frac{1}{j\beta r}=\frac{1}{j2\pi}\frac{\lambda}{r}$ per cui, a seconda del rapporto $\frac{r}{\lambda}$
+\begin{itemize}
+\item[-] possono prevalere i termini di ordine massimo o minimo;
+\item[-] può prevalere il componente meridiano di E rispetto a quello radiale.
+\end{itemize}
+\begin{itemize}
+\item A distanza "piccola" (rispetto a $\lambda$) dalla sorgente
+\begin{equation*}
+E\propto\frac{1}{r^3}\hspace{15mm}H\propto\frac{1}{r^2}
+\end{equation*}
+come nel caso statico di dipolo elettrico o magnetico.
+Il campo nelle “vicinanze” (rispetto a $\lambda$) della sorgente è detto campo di induzione.
+Il campo di induzione può essere elevato anche se la potenza erogata dalla
+sorgente è bassa (predomina la potenza reattiva).
+\item A distanza "grande" (rispetto a $\lambda$) dalla sorgente
+\begin{equation*}
+\textbf{E}\simeq j\frac{\eta\emph{M}}{2\lambda r}e^{-j\beta r}\sin\theta\,\bm{\theta}_0\,;\hspace{5mm}\textbf{H}\simeq\frac{j\emph{M}}{2\lambda r}e^{-j\beta r}\sin\theta\,\bm{\phi}_0\,;\hspace{5mm}\textbf{H}=\frac{\textbf{r}_0\times\textbf{E}}{\eta}
+\end{equation*}
+il campo è detto \emph{campo di radiazione} e trasporta la potenza erogata (irradiata) dalla sorgente.\\\\
+\emph{Campo di radiazione}
+\begin{itemize}
+\item è un'onda sferica la cui ampiezza decresce come $\frac{1}{r}$, come richiesto dalla conservazione dell'energia;
+\item $\textbf{E}$ e $\textbf{H}$ sono trasversi tra loro e a $\textbf{r}_0$ (direzione del trasporto di energia e direzione locale di propagazione);
+\item il rapporto tra $E$ e $H$ è l'impedenza intrinseca del mezzo.
+\end{itemize}
+\emph{Campo asintotico}
+\begin{itemize}
+\item ha le proporietà di un raggio elettromagnetico.
+\end{itemize}
+\end{itemize}
+\subsection*{Irradiazione da sorgente corta filiforme}
+Sorgente cilindrica corta e sottile di lunghezza $\ell$ in cui scorre corrente $I$, con $\textbf{J}_i$ indipendente dalle coordinate;\\
+$\emph{M}=I\ell$;\\
+il campo di radiazione è
+\begin{equation*}
+\textbf{E}_\infty(\textbf{r})=j\frac{\eta I}{2}\frac{\ell}{\lambda}\frac{e^{-j\beta r}}{r}sin\theta\,\bm{\theta}_0;\hspace{10mm}\textbf{H}_\infty=\frac{\textbf{r}_0\times\textbf{E}_\infty}{\eta}
+\end{equation*}
+la potenza irradiata è proporzionale a $\left(\frac{\ell}{\lambda}\right)^2$: se la sorgente è "corta" rispetto a $\lambda$ essa irradia poco.\\\\
+Per il generatore, il filamento di corrente che irradia equivale a una resistenza $R_i$ (\emph{resistenza di radiazione}) che dissipa la potenza $W_i$ irradiata
+\begin{equation*}
+W_i=\frac{\pi}{3}\eta I^2\left(\frac{\ell}{\lambda}\right)^2
+\end{equation*}
+\begin{equation*}
+R_i=\frac{2W_i}{I^2}=\frac{2}{3}\pi\eta\left(\frac{\ell}{\lambda}\right)^2
+\end{equation*}
+qualunque elemento di circuito percorso da corrente è una sorgente che irradia.\\\\
+Per dimensioni dell’ordine del centimetro, almeno sino a frequenze dell’ordine delle centinaia di $MHz$ ($\lambda\simeq1\,m$), la radiazione è trascurabile e i circuiti possono essere analizzati con le approssimazioni "quasi statiche".
+\subsection*{Le antenne}
+Le antenne irradiano (agiscono da sorgente) e captano il campo ettromagnetico.\\\\
+Campo a grande distanza di una sorgente generica
+\begin{equation*}
+\textbf{E}_\infty(\textbf{r})=C\frac{e^{-j\beta r}}{r}\textbf{f}(\theta,\phi)
+\end{equation*}
+\begin{itemize}
+\item[-] i primi due fattori sono gli stessi qualunque sia la sorgente;
+\item[-] il terzo dipende da dimensioni, forma e distribuzione spaziale delle correnti ed è
+quindi caratteristico dell’antenna.
+\end{itemize}
+Le proprietà radiative di un’antenna sono descritte
+\begin{itemize}
+\item  ampiezza e fase dal \emph{diagramma di radiazione in campo}
+\begin{equation*}
+\textbf{F}(\theta,\phi)=F_\theta(\theta,\phi)\,\bm{\theta}_0+F_\phi(\theta,\phi)\,\bm{\phi}_0
+\end{equation*}
+\item in potenza dal \emph{diagramma di radiazione in potenza}
+\begin{equation*}
+P(\theta,\phi)=\frac{1}{2\eta}|\textbf{F}(\theta,\phi)|^2
+\end{equation*}
+il diagramma di radiazione in potenza è la densità di potenza irradiata per unità di
+angolo solido ($W\cdot ster^{-1}$).
+\end{itemize}
+I diagrammi di radiazione dipendono dalla potenza irradiata.\\\\
+Per avere un parametro che dipende solo dall'antenna, si definisce la11
+\emph{funzione di direttività:}\\
+diagramma di radiazione in potenza normalizzato alla densità angolare media di
+potenza irradiata (trasmessa):
+\begin{equation*}
+D(\theta,\phi)=\frac{P(\theta,\phi)}{\frac{W_T}{4\pi}}
+\end{equation*}
+la \emph{direttività} di un'antenna è il valore massimo di $D(\theta,\phi)$.\\\\
+Rappresentazione di $D(\theta,\phi)$ in coordinate polari
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=0.5\linewidth]{im12}
+\end{figure}
+\\Spesso un'antenna opera sia in trasmissione, sia in ricezione
+\begin{equation*}
+\text{\emph{Area equivalente}}\hspace{15mm}A_{ep}(\theta,\phi)=\frac{W_{rp}(\theta,\phi)}{\emph{P}}
+\end{equation*}
+\begin{itemize}
+\item[-] $W_{rp}$ è la potenza ricevuta;
+\item[-] $\emph{P}$ è la densità superificale di potenza incidente;
+\end{itemize}
+$A_{ep}$ dipende dalla polarizzazione del campo incidente.\\\\
+\underline{\textbf{N.B.}} l'area eq. di un'antenna "ad apertura" è una frazione dell'area geometrica
+\begin{equation*}
+A_e=\eta_AA_g\hspace{15mm\eta_A\leq1}
+\end{equation*}
+$\eta_A$ è il rendimento di apertura, se ci fosse una distribuzione di correnti impresse uniforme sull’apertura $\,\,\Rightarrow\,\,\,\eta_A=1$.\\
+Ma in pratica $0.5\leq\eta_A\leq0.8$\\\\
+Introduciamo una grandezza che misura la proporzionalità tra area equivalente e direttività
+\begin{equation*}
+A_{e}(\theta,\phi)=\frac{\lambda^2}{4\pi}D(\theta,\phi)
+\end{equation*}
+\underline{\emph{Angolo a metà potenza:}} $\,\theta_0$
+\begin{equation*}
+P(\frac{\theta_0}{2},\phi)=P(-\frac{\theta_0}{2},\phi)=\frac{1}{2}P(\theta_0,\phi)_{max}=\frac{1}{2}P(0,0)
+\end{equation*}
+\begin{equation*}
+\theta_0=C\frac{\lambda}{D}
+\end{equation*}
+\hspace*{4mm}ci indica quant'è grande l'antenna rispetto a $\lambda$.
+\begin{itemize}
+\item[D:] dimensione antenna in piano contenente $\theta_0$;
+\item[C:] dipende dal tipo di antenna ($C\simeq0.88\div2$ oppure $=1$ nel caso ideale di distribuzione di campo uniforme sull’apertura).
+\end{itemize}
+Lunghezza di lobo: $\theta_0 = \frac{\pi}{2}$.
 \subsection*{Il collegamento radio}
 Due antenne $A_1$ e $A_2$ a distanza "grande"
 \begin{figure}[ht] 
