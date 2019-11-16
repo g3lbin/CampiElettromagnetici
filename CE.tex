@@ -7,14 +7,11 @@
 \usepackage{graphicx}
 \usepackage{bm}
 \usepackage{esint} 
-
-\let\oldoiint\oiint
-\renewcommand{\oiint}{\oldoiint\limits}
+\let\oldoiint\oiint\renewcommand{\oiint}{\oldoiint\limits}
 
 \begin{document}
-
-\author{Cristiano Cuffaro}
 \title{Campi Elettromagnetici}
+\date{}
 \maketitle
 
 \section{Definizioni e relazioni fondamentali\\}
@@ -645,6 +642,10 @@ Dal punto di vista propagativo il mezzo può essere considerato privo di dissipa
 \includegraphics[width=0.8\linewidth]{im13}
 \caption{Attenuazione in decibel dovuta alla sola atmosfera su un percorso verticale tra un punto al livello del mare e un satellite allo zenit.}
 \end{figure}
+L'attenuazione (cui si riferisce il grafico) che subisce il campo nel percorso tra $s_i$ ed $s$, determinata dal rapporto tra i moduli dei campi o tra le densità di potenza, è comunemente espressa in dB:
+\begin{equation*}
+A(s,s_i)=-20\log_{10}\left|\frac{E(s)}{E(s_i)}\right|=-10\log_{10}\frac{\emph{P(s)}}{P(s_i)}
+\end{equation*}
 \subsection*{Impedenza intrinseca}
 Mezzo dissipativo per conducibilità: $g\neq 0$, $\epsilon$ e $\mu$ reali
 \begin{equation*}
