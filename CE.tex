@@ -357,7 +357,7 @@ misura l'ampiezza della variazione di energia immagazzinata nel campo elettrico 
 \begin{itemize}
 \item parte reale: potenza media su un periodo che fluisce attraverso la superficie $S$;
 \item parte immaginaria: potenza reattiva sulla superficie $S$.\\\\
-\underline{\textbf{Oss:}} $\emph{\textbf{P}}=\frac{1}{2}\textbf{E}\times\textbf{H}^*$ è il vettore di Poynting complesso, densità superficiale di potenza ($Wm^{-2}$ o $VAm^{-2}$).
+\underline{\textbf{Oss:}} $\bm{\mathcal{P}}=\frac{1}{2}\textbf{E}\times\textbf{H}^*$ è il vettore di Poynting complesso, densità superficiale di potenza ($Wm^{-2}$ o $VAm^{-2}$).
 \end{itemize}
 \end{itemize}
 \subsection*{Bilancio energetico}
@@ -457,7 +457,7 @@ componenti reali e immaginari di $\textbf{E}_0$ e $\textbf{H}_0$ sono ortogonali
 \subsection*{Raggi elettromagnetici}
 Vettore di Poynting
 \begin{equation*}
-\emph{\textbf{P}}=\frac{1}{2}\textbf{E}\times\textbf{H}^*=\frac{1}{2}\textbf{E}_0\times\textbf{H}_0^*=\frac{1}{2}\textbf{E}_0\times\frac{\textbf{s}_0\times\textbf{E}_0^*}{\eta^*}=\frac{1}{2}\frac{\textbf{E}_0\cdot\textbf{E}_0^*}{\eta^*}\,\textbf{s}_0
+\bm{\mathcal{P}}=\frac{1}{2}\textbf{E}\times\textbf{H}^*=\frac{1}{2}\textbf{E}_0\times\textbf{H}_0^*=\frac{1}{2}\textbf{E}_0\times\frac{\textbf{s}_0\times\textbf{E}_0^*}{\eta^*}=\frac{1}{2}\frac{\textbf{E}_0\cdot\textbf{E}_0^*}{\eta^*}\,\textbf{s}_0
 \end{equation*}
 ha direzione e verso di $\textbf{s}_0$, versore ortogonale alle superfici d'onda $\phi(\textbf{r})=cost$, indicando che il trasporto di potenza avviene ortogonalmente alle $\phi(\textbf{r})=cost$. Curve ortogonali in ogni punto alle superfici d'onda sono traiettorie dell'energia elettromagnetica, denominate \emph{raggi elettromagnetici}.\\\\
 L’uso dei raggi elettromagnetici riduce il problema della propagazione da tridimen-
@@ -644,7 +644,7 @@ Dal punto di vista propagativo il mezzo può essere considerato privo di dissipa
 \end{figure}
 L'attenuazione (cui si riferisce il grafico) che subisce il campo nel percorso tra $s_i$ ed $s$, determinata dal rapporto tra i moduli dei campi o tra le densità di potenza, è comunemente espressa in dB:
 \begin{equation*}
-A(s,s_i)=-20\log_{10}\left|\frac{E(s)}{E(s_i)}\right|=-10\log_{10}\frac{\emph{P(s)}}{P(s_i)}
+A(s,s_i)=-20\log_{10}\left|\frac{E(s)}{E(s_i)}\right|=-10\log_{10}\frac{\mathcal{P}(s)}{\mathcal{P}(s_i)}
 \end{equation*}
 \subsection*{Impedenza intrinseca}
 Mezzo dissipativo per conducibilità: $g\neq 0$, $\epsilon$ e $\mu$ reali
@@ -726,7 +726,7 @@ All'esterno: sovrapposizione di onda incidente e riflessa
 i campi non si propagano $\Rightarrow$ onde stazionarie.\\\\
 Il vettore di Poynting del campo totale è
 \begin{equation*}
-\emph{\textbf{P}}_{tot}=-j\frac{|E_0|^2}{\eta}\sin(2\beta z)\textbf{z}_0
+\bm{\mathcal{P}}_{tot}=-j\frac{|E_0|^2}{\eta}\sin(2\beta z)\textbf{z}_0
 \end{equation*}
 è immaginario $\Rightarrow$ il campo totale non trasporta potenza.
 \subsection*{Incidenza obliqua}
@@ -951,7 +951,7 @@ Per comodità assumiamo l'onda incidente polarizzata orizzontalmente $\,\Rightar
 \textbf{H}_0'=\frac{\beta'E_0'}{\omega\mu_2}\textbf{z}_0+j\frac{\alpha'E_0'}{\omega\mu_2}\textbf{x}_0
 \end{equation*}
 \begin{equation*}
-\emph{\textbf{P}'}=\frac{1}{2}j|E_0'|^2\frac{\alpha'}{\omega\mu_2}e^{-2\alpha'z}\textbf{z}_0+\frac{1}{2}|E_0'|^2\frac{\beta'}{\omega\mu_2}e^{-2\alpha'z}\textbf{x}_0
+\bm{\mathcal{P}'}=\frac{1}{2}j|E_0'|^2\frac{\alpha'}{\omega\mu_2}e^{-2\alpha'z}\textbf{z}_0+\frac{1}{2}|E_0'|^2\frac{\beta'}{\omega\mu_2}e^{-2\alpha'z}\textbf{x}_0
 \end{equation*}
 il termine diretto verso $\textbf{z}_0$ è immaginario mentre quello diretto verso $\textbf{x}_0$ è reale $\,\Rightarrow\,$ quando l'angolo di incidenza supera l'angolo limite non vi è flusso di potenza attraverso il piano di separazione ma la potenza fluisce parallelamente ad esso.
 \section{Irradiazione}
@@ -964,7 +964,7 @@ Campo prodotto da una sorgente elettrica "puntiforme" in un mezzo omogeneo privo
 \begin{equation*}
 \textbf{E}(\textbf{r})=\textbf{E}_0e^{-jk_0\phi(r)}
 \end{equation*}
-con $\,\,\,\textbf{E}_0\perp\textbf{H}_0\perp\textbf{r}_0\parallel\emph{\textbf{P}}$.\\
+con $\,\,\,\textbf{E}_0\perp\textbf{H}_0\perp\textbf{r}_0\parallel\bm{\mathcal{P}}$.\\
 Nel mezzo omogeneo privo di dissipazioni $\phi(r)=nr\,\,\,\Rightarrow\,\,\,k_0\phi(r)=kr$ e considerata la generica sfera $S$ centrata sulla sorgente, per la conservazione dell'energia si ha
 \begin{equation*}
 Re\left[\oiint_S\frac{\textbf{E}\times\textbf{H}^*}{2}\cdot\textbf{n}\,dS\right]=Re\left[\oiint_S\frac{\textbf{E}_0\times\textbf{H}_0^*}{2}\cdot\textbf{n}\,dS\right]=cost\,\,\,\forall S
@@ -1081,11 +1081,11 @@ Rappresentazione di $D(\theta,\phi)$ in coordinate polari
 \end{figure}
 \\Spesso un'antenna opera sia in trasmissione, sia in ricezione
 \begin{equation*}
-\text{\emph{Area equivalente}}\hspace{15mm}A_{ep}(\theta,\phi)=\frac{W_{rp}(\theta,\phi)}{\emph{P}}
+\text{\emph{Area equivalente}}\hspace{15mm}A_{ep}(\theta,\phi)=\frac{W_{rp}(\theta,\phi)}{\mathcal{P}}
 \end{equation*}
 \begin{itemize}
 \item[-] $W_{rp}$ è la potenza ricevuta;
-\item[-] $\emph{P}$ è la densità superificale di potenza incidente;
+\item[-] $\mathcal{P}$ è la densità superificale di potenza incidente;
 \end{itemize}
 $A_{ep}$ dipende dalla polarizzazione del campo incidente.\\\\
 \underline{\textbf{N.B.}} l'area eq. di un'antenna "ad apertura" è una frazione dell'area geometrica
@@ -1118,16 +1118,16 @@ Due antenne $A_1$ e $A_2$ a distanza "grande"
 \includegraphics[width=0.8\linewidth]{im9}
 \end{figure}
 \begin{equation*}
-W_2=A_{e2}\emph{P}_1
+W_2=A_{e2}\mathcal{P}_1
 \end{equation*}
-$\emph{P}_1$ è la densità superficiale di potenza che $A_1$ crea sul piano di bocca di $A_2$
+$\mathcal{P}_1$ è la densità superficiale di potenza che $A_1$ crea sul piano di bocca di $A_2$
 \begin{equation*}
-\emph{P}_1=\frac{1}{2}E_1H_1^*=\frac{1}{2}E_{10}H_{10}^*e^{-2\int_0^Rk_j(\lambda,s)ds}=\frac{P_1}{R_2}e^{-2\int_0^Rk_j(\lambda,s)ds}
+\mathcal{P}_1=\frac{1}{2}E_1H_1^*=\frac{1}{2}E_{10}H_{10}^*e^{-2\int_0^Rk_j(\lambda,s)ds}=\frac{P_1}{R_2}e^{-2\int_0^Rk_j(\lambda,s)ds}
 \end{equation*}
 se $E_{10}$ e $H_{10}$ sono i campi in assenza di attenuazione;\\
 $k_j$ è l'attenuazione specifica del mezzo attraversato
 \begin{equation*}
-\emph{P}_1=\frac{D_1W_1}{4\pi R^2}e^{-2\int_0^Rk_j(\lambda,s)ds}
+\mathcal{P}_1=\frac{D_1W_1}{4\pi R^2}e^{-2\int_0^Rk_j(\lambda,s)ds}
 \end{equation*}
 coefficiente di trasmissione tra le due antenne:
 \begin{equation*}
